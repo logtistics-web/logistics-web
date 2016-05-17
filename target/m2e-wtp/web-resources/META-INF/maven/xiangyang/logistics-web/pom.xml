@@ -243,7 +243,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>insect-web</finalName>
+		<finalName>logistics-web</finalName>
 		<plugins>
 			<!-- Run the JUnit unit tests in an isolated classloader -->
 			<plugin>
