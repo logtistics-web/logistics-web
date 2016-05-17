@@ -28,9 +28,11 @@
     from tb_car_message
     where id = #{id,jdbcType=INTEGER}
   </select>
-  <select id="getAllCarMsg">
+  
+  <select id="getAllCarMsg" resultMap="BaseResultMap">
   	select * from tb_car_message
   </select>
+  
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from tb_car_message
     where id = #{id,jdbcType=INTEGER}
