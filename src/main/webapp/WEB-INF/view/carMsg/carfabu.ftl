@@ -226,7 +226,7 @@ return false;
       <td height="40" colspan="4">
         <p align="center">
         <input type="submit" name="show" value="发布" onClick="return check()">&nbsp;&nbsp;
-        <input type="submit" name="reset" value="重置">&nbsp;&nbsp;<a href="services.html">返回</a>
+        <input type="submit" name="reset" value="重置">&nbsp;&nbsp;<a href="${rc.contextPath}/carMsgList">返回</a>
       </td>
     </tr>
   </table>

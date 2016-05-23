@@ -7,14 +7,17 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.logistics.dto.ListResult;
 import com.logistics.dto.Pagination;
 import com.logistics.mapper.CarMessageMapper;
 import com.logistics.model.CarMessage;
-import com.logistics.model.EnterpriseMessage;
+
 import com.logistics.service.CarMessageService;
 
 @Controller
@@ -53,5 +56,29 @@ public class CarMsgCtrl {
 	public String loadAdd(){
 		
 		return "carMsg/carfabu";
+	}
+	
+	@RequestMapping("/addGoods")
+	@ResponseBody
+	public ModelAndView addNews(@ModelAttribute("SpringWeb") CarMessage carMsg, HttpServletRequest request, ModelMap  model) {
+		
+		CarMessage record = new CarMessage();
+//		record.set
+		// TODO setAddUser setAddTime
+		
+		carMessageMapper.insert(record);
+		
+		return new ModelAndView("redirect:/carList");
+	}
+	
+	@RequestMapping("/modifyGoods")
+	@ResponseBody
+	public ModelAndView modifyNews(@ModelAttribute("SpringWeb") CarMessage carMsg, HttpServletRequest request, ModelMap  model) {
+		
+		CarMessage record = carMessageMapper.selectByPrimaryKey(carMsg.getId());
+		// TODO update setAddTime
+		
+		carMessageMapper.updateByPrimaryKey(record);
+		return new ModelAndView("redirect:/carList");
 	}
 }
