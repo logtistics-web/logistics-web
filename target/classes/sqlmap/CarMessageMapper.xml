@@ -8,6 +8,7 @@
     <result column="style" property="style" jdbcType="VARCHAR" />
     <result column="carload" property="carload" jdbcType="VARCHAR" />
     <result column="usertime" property="usertime" jdbcType="VARCHAR" />
+    <result column="drivename" property="drivename" jdbcType="VARCHAR" />
     <result column="drivertime" property="drivertime" jdbcType="VARCHAR" />
     <result column="licencenumber" property="licencenumber" jdbcType="VARCHAR" />
     <result column="licencestyle" property="licencestyle" jdbcType="VARCHAR" />
@@ -19,8 +20,8 @@
     <result column="adduser" property="adduser" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, trademark, brand, style, carload, usertime, drivertime, licencenumber, licencestyle, 
-    transpotstyle, linkman, linkphone, rmark, issuedate, adduser
+    id, trademark, brand, style, carload, usertime, drivename, drivertime, licencenumber, 
+    licencestyle, transpotstyle, linkman, linkphone, rmark, issuedate, adduser
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
@@ -28,11 +29,9 @@
     from tb_car_message
     where id = #{id,jdbcType=INTEGER}
   </select>
-  
-  <select id="getAllCarMsg" resultMap="BaseResultMap">
-  	select * from tb_car_message
+   <select id="getAllCarMsg" resultMap="BaseResultMap">
+  	select * from tb_car_message where brand = '已审核'
   </select>
-  
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from tb_car_message
     where id = #{id,jdbcType=INTEGER}
@@ -40,16 +39,16 @@
   <insert id="insert" parameterType="com.logistics.model.CarMessage" >
     insert into tb_car_message (id, trademark, brand, 
       style, carload, usertime, 
-      drivertime, licencenumber, licencestyle, 
-      transpotstyle, linkman, linkphone, 
-      rmark, issuedate, adduser
-      )
+      drivename, drivertime, licencenumber, 
+      licencestyle, transpotstyle, linkman, 
+      linkphone, rmark, issuedate, 
+      adduser)
     values (#{id,jdbcType=INTEGER}, #{trademark,jdbcType=VARCHAR}, #{brand,jdbcType=VARCHAR}, 
       #{style,jdbcType=VARCHAR}, #{carload,jdbcType=VARCHAR}, #{usertime,jdbcType=VARCHAR}, 
-      #{drivertime,jdbcType=VARCHAR}, #{licencenumber,jdbcType=VARCHAR}, #{licencestyle,jdbcType=VARCHAR}, 
-      #{transpotstyle,jdbcType=VARCHAR}, #{linkman,jdbcType=VARCHAR}, #{linkphone,jdbcType=VARCHAR}, 
-      #{rmark,jdbcType=VARCHAR}, #{issuedate,jdbcType=VARCHAR}, #{adduser,jdbcType=VARCHAR}
-      )
+      #{drivename,jdbcType=VARCHAR}, #{drivertime,jdbcType=VARCHAR}, #{licencenumber,jdbcType=VARCHAR}, 
+      #{licencestyle,jdbcType=VARCHAR}, #{transpotstyle,jdbcType=VARCHAR}, #{linkman,jdbcType=VARCHAR}, 
+      #{linkphone,jdbcType=VARCHAR}, #{rmark,jdbcType=VARCHAR}, #{issuedate,jdbcType=VARCHAR}, 
+      #{adduser,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.logistics.model.CarMessage" >
     insert into tb_car_message
@@ -71,6 +70,9 @@
       </if>
       <if test="usertime != null" >
         usertime,
+      </if>
+      <if test="drivename != null" >
+        drivename,
       </if>
       <if test="drivertime != null" >
         drivertime,
@@ -119,6 +121,9 @@
       <if test="usertime != null" >
         #{usertime,jdbcType=VARCHAR},
       </if>
+      <if test="drivename != null" >
+        #{drivename,jdbcType=VARCHAR},
+      </if>
       <if test="drivertime != null" >
         #{drivertime,jdbcType=VARCHAR},
       </if>
@@ -166,6 +171,9 @@
       <if test="usertime != null" >
         usertime = #{usertime,jdbcType=VARCHAR},
       </if>
+      <if test="drivename != null" >
+        drivename = #{drivename,jdbcType=VARCHAR},
+      </if>
       <if test="drivertime != null" >
         drivertime = #{drivertime,jdbcType=VARCHAR},
       </if>
@@ -203,6 +211,7 @@
       style = #{style,jdbcType=VARCHAR},
       carload = #{carload,jdbcType=VARCHAR},
       usertime = #{usertime,jdbcType=VARCHAR},
+      drivename = #{drivename,jdbcType=VARCHAR},
       drivertime = #{drivertime,jdbcType=VARCHAR},
       licencenumber = #{licencenumber,jdbcType=VARCHAR},
       licencestyle = #{licencestyle,jdbcType=VARCHAR},
