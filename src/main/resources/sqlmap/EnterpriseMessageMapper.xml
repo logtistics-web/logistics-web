@@ -21,6 +21,9 @@
     id, emterprisetype, enterprisrname, operation, workarea, address, phone, linkman, 
     fax, emial, http, introduce, issusdate, adduser
   </sql>
+  <select id="getAllEnterprises" resultMap="BaseResultMap">
+  	select * from tb_enterprise_message
+  </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />

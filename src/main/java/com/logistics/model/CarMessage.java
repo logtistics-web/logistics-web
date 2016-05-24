@@ -13,6 +13,8 @@ public class CarMessage {
 
     private String usertime;
 
+    private String drivename;
+
     private String drivertime;
 
     private String licencenumber;
@@ -77,6 +79,14 @@ public class CarMessage {
 
     public void setUsertime(String usertime) {
         this.usertime = usertime == null ? null : usertime.trim();
+    }
+
+    public String getDrivename() {
+        return drivename;
+    }
+
+    public void setDrivename(String drivename) {
+        this.drivename = drivename == null ? null : drivename.trim();
     }
 
     public String getDrivertime() {

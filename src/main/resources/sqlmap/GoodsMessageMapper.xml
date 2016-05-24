@@ -22,6 +22,9 @@
     id, goodsname, goodsnumber, goodsunit, stareprovince, startcity, endprovince, endcity, 
     style, phone, linkman, issuedate, adduser, remark, request
   </sql>
+  <select id="getAllGoods" resultMap="BaseResultMap">
+  	select * from tb_goods_message
+  </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
