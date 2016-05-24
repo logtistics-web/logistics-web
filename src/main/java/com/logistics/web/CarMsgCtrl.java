@@ -58,7 +58,7 @@ public class CarMsgCtrl {
 		return "carMsg/carfabu";
 	}
 	
-	@RequestMapping("/addGoods")
+	@RequestMapping("/addGarMsg")
 	@ResponseBody
 	public ModelAndView addNews(@ModelAttribute("SpringWeb") CarMessage carMsg, HttpServletRequest request, ModelMap  model) {
 		
@@ -71,7 +71,7 @@ public class CarMsgCtrl {
 		return new ModelAndView("redirect:/carList");
 	}
 	
-	@RequestMapping("/modifyGoods")
+	@RequestMapping("/modifyCarMsg")
 	@ResponseBody
 	public ModelAndView modifyNews(@ModelAttribute("SpringWeb") CarMessage carMsg, HttpServletRequest request, ModelMap  model) {
 		
