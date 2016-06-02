@@ -81,7 +81,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <td width="32%" height="37" align="center">${carMessage.drivename}</td>
   </tr>
   <tr>
-    <td width="19%" height="37" align="center"><font size="4">驾驶时间</font></td>
+    <td width="19%" height="37" align="center"><font size="4">驾驶时间</font></td>  
     <td width="31%" height="37" align="center">${carMessage.drivertime}</td>
     <td width="18%" height="36" align="center"><font size="4">驾照号码</font></td>
     <td width="32%" height="36" align="center">${carMessage.licencenumber}</td>

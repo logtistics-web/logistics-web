@@ -74,7 +74,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <#if goodsMsgList??>
 <#list goodsMsgList as goodsMsg>
 	<tr style="padding:5px;">
-<td width="804" height="29" align="center">${goodsMsg.style}</td>
+<td width="804" height="29" align="center">${goodsMsg.style}</td>  
 <td width="804" height="29" align="center">${goodsMsg.goodsname}</td>
 <td width="804" height="29" align="center">${goodsMsg.goodsnumber}</td>
 <td width="804" height="29" align="center">${goodsMsg.goodsunit}</td>

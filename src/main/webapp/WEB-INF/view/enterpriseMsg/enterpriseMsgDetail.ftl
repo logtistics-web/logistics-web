@@ -70,8 +70,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <td width="115" height="35">经营范围</td>
     <td width="265" height="35">${enterpriseMsg.operation}</td>
     <td width="125" height="35">所属区域：</td>
-    <td width="253" height="35">${enterpriseMsg.workarea}</td>
-  </tr>
+    <td width="253" height="35">${enterpriseMsg.workarea}</td> 
+  </tr> 
   <tr>
     <td width="115" height="38">企业地址</td>
     <td width="265" height="38">${enterpriseMsg.address}</td>

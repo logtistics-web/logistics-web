@@ -86,7 +86,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <tr>
     <td width="17%" height="30" align="center">运输类型：</td>
     <td width="36%" height="30" align="center">${goodsMsg.style}</td>
-    <td width="17%" height="30" align="center" valign="middle">运输时间：</td>
+    <td width="17%" height="30" align="center" align="middle">运输时间：</td>  
     <td width="30%" height="30" align="center">${goodsMsg.issuedate}</td>
   </tr>
   <tr>
