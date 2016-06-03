@@ -8,7 +8,7 @@
 
 <title>货物信息</title>
 <link rel="stylesheet" href="logistics/CSS/style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Mining Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
@@ -33,15 +33,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<a href="index.html">货物信息</a>
 			</div>
 			<div class="top-nav">
-				<span class="menu">MENU</span>
-				<ul class="nav1 cl-effect-15">
-					<li><a href="${rc.contextPath}/index" class="网站首页">网站首页</a></li>
-					<li><a href="${rc.contextPath}/goodsMsgList" data-hover="货物信息">货物信息</a></li>
-					<li><a href="${rc.contextPath}/carMsgList" data-hover="车辆信息">车辆信息</a></li>
-					<li><a href="${rc.contextPath}/enterpriseMsgList" data-hover="企业信息">企业信息</a></li>
-					<li><a href="${rc.contextPath}/galleryMsgList" data-hover="物流知识">物流知识</a></li>
-					<li><a href="${rc.contextPath}/index" data-hover="个人中心">个人中心</a></li>
-				</ul>
+				<#include "include/header.ftl" />
 				<!-- script-for-menu -->
 					<script>
 						 $( "span.menu" ).click(function() {
@@ -74,7 +66,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <#if goodsMsgList??>
 <#list goodsMsgList as goodsMsg>
 	<tr style="padding:5px;">
-<td width="804" height="29" align="center">${goodsMsg.style}</td>
+<td width="804" height="29" align="center">${goodsMsg.style}</td>  
 <td width="804" height="29" align="center">${goodsMsg.goodsname}</td>
 <td width="804" height="29" align="center">${goodsMsg.goodsnumber}</td>
 <td width="804" height="29" align="center">${goodsMsg.goodsunit}</td>

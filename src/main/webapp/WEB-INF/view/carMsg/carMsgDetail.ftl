@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <link rel="stylesheet" href="../CSS/style.css">
-<title>
+<title> 
 
 CarMessageshow
 </title>
@@ -35,15 +35,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<a href="index.html">车辆信息展示</a>
 			</div>
 			<div class="top-nav">
-				<span class="menu">MENU</span>
-				<ul class="nav1 cl-effect-15">
-					<li><a href="${rc.contextPath}/index" class="网站首页">网站首页</a></li>
-					<li><a href="${rc.contextPath}/goodsMsgList" data-hover="货物信息">货物信息</a></li>
-					<li><a href="${rc.contextPath}/carMsgList" data-hover="车辆信息">车辆信息</a></li>
-					<li><a href="${rc.contextPath}/enterpriseMsgList" data-hover="企业信息">企业信息</a></li>
-					<li><a href="${rc.contextPath}/galleryMsgList" data-hover="物流知识">物流知识</a></li>
-					<li><a href="${rc.contextPath}/index" data-hover="个人中心">个人中心</a></li>
-				</ul>
+				<#include "include/header.ftl" />
 				<!-- script-for-menu -->
 					<script>
 						 $( "span.menu" ).click(function() {
@@ -81,7 +73,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <td width="32%" height="37" align="center">${carMessage.drivename}</td>
   </tr>
   <tr>
-    <td width="19%" height="37" align="center"><font size="4">驾驶时间</font></td>
+    <td width="19%" height="37" align="center"><font size="4">驾驶时间</font></td>  
     <td width="31%" height="37" align="center">${carMessage.drivertime}</td>
     <td width="18%" height="36" align="center"><font size="4">驾照号码</font></td>
     <td width="32%" height="36" align="center">${carMessage.licencenumber}</td>

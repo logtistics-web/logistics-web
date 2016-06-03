@@ -17,7 +17,7 @@ import com.logistics.dto.ListResult;
 import com.logistics.dto.Pagination;
 import com.logistics.mapper.CarMessageMapper;
 import com.logistics.model.CarMessage;
-
+import com.logistics.model.User;
 import com.logistics.service.CarMessageService;
 
 @Controller
@@ -53,8 +53,11 @@ public class CarMsgCtrl {
 	}
 	
 	@RequestMapping("/carsLoadAdd")
-	public String loadAdd(){
-		
+	public String loadAdd(HttpServletRequest request){
+		User userq = (User) request.getSession().getAttribute("user");
+		if(userq == null){
+			return "login/login";
+		}
 		return "carMsg/carfabu";
 	}
 	

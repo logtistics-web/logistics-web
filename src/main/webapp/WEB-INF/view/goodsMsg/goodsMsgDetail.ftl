@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <link rel="stylesheet" href="../CSS/style.css">
 <title>
-Goods_xiangxi page
+Goods_xiangxi page 
 
 
 </title>
@@ -35,15 +35,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<a href="index.html">货物信息</a>
 			</div>
 			<div class="top-nav">
-			  <span class="menu">MENU</span>
-			  <ul class="nav1 cl-effect-15">
-					<li><a href="${rc.contextPath}/index" class="网站首页">网站首页</a></li>
-					<li><a href="${rc.contextPath}/goodsMsgList" data-hover="货物信息">货物信息</a></li>
-					<li><a href="${rc.contextPath}/carMsgList" data-hover="车辆信息">车辆信息</a></li>
-					<li><a href="${rc.contextPath}/enterpriseMsgList" data-hover="企业信息">企业信息</a></li>
-					<li><a href="${rc.contextPath}/galleryMsgList" data-hover="物流知识">物流知识</a></li>
-					<li><a href="${rc.contextPath}/index" data-hover="个人中心">个人中心</a></li>
-				</ul>
+			 <#include "include/header.ftl" />
 				<!-- script-for-menu -->
 			  <script>
 						 $( "span.menu" ).click(function() {
@@ -86,7 +78,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <tr>
     <td width="17%" height="30" align="center">运输类型：</td>
     <td width="36%" height="30" align="center">${goodsMsg.style}</td>
-    <td width="17%" height="30" align="center" valign="middle">运输时间：</td>
+    <td width="17%" height="30" align="center" align="middle">运输时间：</td>  
     <td width="30%" height="30" align="center">${goodsMsg.issuedate}</td>
   </tr>
   <tr>

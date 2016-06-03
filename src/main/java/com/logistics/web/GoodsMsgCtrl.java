@@ -17,6 +17,7 @@ import com.logistics.dto.ListResult;
 import com.logistics.dto.Pagination;
 import com.logistics.mapper.GoodsMessageMapper;
 import com.logistics.model.GoodsMessage;
+import com.logistics.model.User;
 import com.logistics.service.GoodsMessageService;
 
 @Controller
@@ -52,7 +53,12 @@ public class GoodsMsgCtrl {
 	}
 	
 	@RequestMapping("/goodsLoadAdd")
-	public String loadAdd(){
+	public String loadAdd( HttpServletRequest request){
+		
+		User userq = (User) request.getSession().getAttribute("user");
+		if(userq == null){
+			return "login/login";
+		}
 		
 		return "goodsMsg/goodsfabu";
 	}
@@ -62,9 +68,15 @@ public class GoodsMsgCtrl {
 	public ModelAndView addNews(@ModelAttribute("SpringWeb") GoodsMessage goodsMsg, HttpServletRequest request, ModelMap  model) {
 		
 		GoodsMessage record = new GoodsMessage();
+		
+		User userq = (User) request.getSession().getAttribute("user");
+		if(userq == null){
+			return new ModelAndView("login/login");
+		}
 //		record.set
 		// TODO setAddUser setAddTime
-		
+		record.setAdduser(userq.getName());
+//		record.set
 		goodsMsgMapper.insert(record);
 		
 		return new ModelAndView("redirect:/goodsMsgList");

@@ -7,7 +7,7 @@
 
 <link rel="stylesheet" href="../CSS/style.css">
 <title>
-
+ 
 CarMessageshow
 </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,15 +35,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<a href="index.html">企业信息展示</a>
 			</div>
 			<div class="top-nav">
-				<span class="menu">MENU</span>
-				<ul class="nav1 cl-effect-15">
-					<li><a href="${rc.contextPath}/index" class="网站首页">网站首页</a></li>
-					<li><a href="${rc.contextPath}/goodsMsgList" data-hover="货物信息">货物信息</a></li>
-					<li><a href="${rc.contextPath}/carMsgList" data-hover="车辆信息">车辆信息</a></li>
-					<li><a href="${rc.contextPath}/enterpriseMsgList" data-hover="企业信息">企业信息</a></li>
-					<li><a href="${rc.contextPath}/galleryMsgList" data-hover="物流知识">物流知识</a></li>
-					<li><a href="${rc.contextPath}/index" data-hover="个人中心">个人中心</a></li>
-				</ul>
+				<#include "include/header.ftl" />
 				<!-- script-for-menu -->
 					<script>
 						 $( "span.menu" ).click(function() {
@@ -70,8 +62,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <td width="115" height="35">经营范围</td>
     <td width="265" height="35">${enterpriseMsg.operation}</td>
     <td width="125" height="35">所属区域：</td>
-    <td width="253" height="35">${enterpriseMsg.workarea}</td>
-  </tr>
+    <td width="253" height="35">${enterpriseMsg.workarea}</td> 
+  </tr> 
   <tr>
     <td width="115" height="38">企业地址</td>
     <td width="265" height="38">${enterpriseMsg.address}</td>
