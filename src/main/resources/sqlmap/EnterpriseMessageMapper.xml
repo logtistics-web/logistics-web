@@ -22,7 +22,10 @@
     fax, emial, http, introduce, issusdate, adduser
   </sql>
   <select id="getAllEnterprises" resultMap="BaseResultMap">
-  	select * from tb_enterprise_message
+  	select * from tb_enterprise_message group by id desc
+  </select>
+  <select id="getEnterpriseMsgByUser" resultMap="BaseResultMap" parameterType="java.lang.String">
+  		select * from tb_enterprise_message where adduser = #{adduser,jdbcType=VARCHAR}
   </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
@@ -44,7 +47,7 @@
       #{operation,jdbcType=VARCHAR}, #{workarea,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
       #{phone,jdbcType=VARCHAR}, #{linkman,jdbcType=VARCHAR}, #{fax,jdbcType=VARCHAR}, 
       #{emial,jdbcType=VARCHAR}, #{http,jdbcType=VARCHAR}, #{introduce,jdbcType=VARCHAR}, 
-      #{issusdate,jdbcType=TIMESTAMP}, #{adduser,jdbcType=VARCHAR})
+      now(), #{adduser,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.logistics.model.EnterpriseMessage" >
     insert into tb_enterprise_message
@@ -130,7 +133,7 @@
         #{introduce,jdbcType=VARCHAR},
       </if>
       <if test="issusdate != null" >
-        #{issusdate,jdbcType=TIMESTAMP},
+        #{issuedate,jdbcType=VARCHAR},
       </if>
       <if test="adduser != null" >
         #{adduser,jdbcType=VARCHAR},

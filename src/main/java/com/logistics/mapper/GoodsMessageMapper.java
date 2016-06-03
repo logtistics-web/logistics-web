@@ -2,6 +2,7 @@ package com.logistics.mapper;
 
 import java.util.List;
 
+import com.logistics.model.CarMessage;
 import com.logistics.model.GoodsMessage;
 
 public interface GoodsMessageMapper {
@@ -18,4 +19,6 @@ public interface GoodsMessageMapper {
     int updateByPrimaryKey(GoodsMessage record);
     
     List<GoodsMessage> getAllGoods();
+    
+    List<GoodsMessage> getGoodsMsgByUser(String username);
 }

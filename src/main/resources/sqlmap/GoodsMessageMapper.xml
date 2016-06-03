@@ -25,6 +25,9 @@
   <select id="getAllGoods" resultMap="BaseResultMap">
   	select * from tb_goods_message
   </select>
+   <select id="getGoodsMsgByUser" resultMap="BaseResultMap" parameterType="java.lang.String">
+  		select * from tb_goods_message where adduser = #{adduser,jdbcType=VARCHAR}
+  </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
@@ -45,7 +48,7 @@
     values (#{id,jdbcType=INTEGER}, #{goodsname,jdbcType=VARCHAR}, #{goodsnumber,jdbcType=INTEGER}, 
       #{goodsunit,jdbcType=VARCHAR}, #{stareprovince,jdbcType=VARCHAR}, #{startcity,jdbcType=VARCHAR}, 
       #{endprovince,jdbcType=VARCHAR}, #{endcity,jdbcType=VARCHAR}, #{style,jdbcType=VARCHAR}, 
-      #{phone,jdbcType=VARCHAR}, #{linkman,jdbcType=VARCHAR}, #{issuedate,jdbcType=TIMESTAMP}, 
+      #{phone,jdbcType=VARCHAR}, #{linkman,jdbcType=VARCHAR},now(), 
       #{adduser,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{request,jdbcType=VARCHAR}
       )
   </insert>
@@ -133,7 +136,7 @@
         #{linkman,jdbcType=VARCHAR},
       </if>
       <if test="issuedate != null" >
-        #{issuedate,jdbcType=TIMESTAMP},
+        #{issuedate,jdbcType=VARCHAR},
       </if>
       <if test="adduser != null" >
         #{adduser,jdbcType=VARCHAR},

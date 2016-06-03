@@ -73,10 +73,19 @@ public class GoodsMsgCtrl {
 		if(userq == null){
 			return new ModelAndView("login/login");
 		}
-//		record.set
-		// TODO setAddUser setAddTime
 		record.setAdduser(userq.getName());
-//		record.set
+		record.setGoodsname(goodsMsg.getGoodsname());
+		record.setStyle(goodsMsg.getStyle());
+		record.setGoodsnumber(goodsMsg.getGoodsnumber());
+		record.setGoodsunit(goodsMsg.getGoodsunit());
+		record.setStareprovince(goodsMsg.getStareprovince());
+		record.setStartcity(goodsMsg.getStartcity());
+		record.setEndprovince(goodsMsg.getEndprovince());
+		record.setEndcity(goodsMsg.getEndcity());
+		record.setStyle(goodsMsg.getStyle());
+		record.setPhone(goodsMsg.getPhone());
+		record.setLinkman(goodsMsg.getLinkman());
+		record.setRemark(goodsMsg.getRemark());
 		goodsMsgMapper.insert(record);
 		
 		return new ModelAndView("redirect:/goodsMsgList");

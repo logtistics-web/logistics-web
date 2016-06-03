@@ -3,6 +3,7 @@ package com.logistics.mapper;
 import java.util.List;
 
 import com.logistics.model.EnterpriseMessage;
+import com.logistics.model.GoodsMessage;
 
 public interface EnterpriseMessageMapper {
     int deleteByPrimaryKey(Integer id);
@@ -18,4 +19,6 @@ public interface EnterpriseMessageMapper {
     int updateByPrimaryKey(EnterpriseMessage record);
     
     List<EnterpriseMessage> getAllEnterprises();
+    
+    List<EnterpriseMessage> getEnterpriseMsgByUser(String username);
 }

@@ -138,58 +138,53 @@ return false;
 
 <body bgcolor="#ffffff">
 
-<form method="POST" action="/logistics/Goods/Good_config.jsp" name="form1">
+<form method="POST" action="${rc.contextPath}/addGoods" name="form1">
   <table width="806" border="0" align="center" cellpadding="0" cellspacing="0"bordercolor="#FFFFFF" bordercolordark="#333333" bordercolorlight="#FFFFFF">
     <tr>
-      <td width="134">
-      <p align="center">货物类型：</p>      </td>
-      <td width="262" >
-        <p align="center" ><div class="fabu1"><input type="text" name="gclass" size="20"></p></div>
-      </td>
       <td width="123" >
         <p align="center">货物名称：</p>
       </td>
       <td width="277" >
-        <p align="center"><div class="fabu1"><input type="text" name="gname" size="20"></p>
+        <p align="center"><div class="fabu1"><input type="text" name="goodsname" size="20"></p>
       </td>
     </tr>
     <tr>
       <td>
       <p align="center">货物数量：</p>      </td>
       <td >
-        <p align="center"><div class="fabu1"><input type="text" name="gcount" size="10"></p>
+        <p align="center"><div class="fabu1"><input type="text" name="goodsnumber" size="10"></p>
       </td>
       <td>
         <p align="center">数量单位：</p>
       </td>
       <td >
-        <p align="center"><div class="fabu1"><input type="text" name="gunit" size="20"></p>
+        <p align="center"><div class="fabu1"><input type="text" name="goodsunit" size="20"></p>
       </td>
     </tr>
     <tr>
       <td >
       <p align="center">起始省份：</p>      </td>
       <td >
-        <p align="center"><div class="fabu1"><input type="text" name="gstartfirm" size="20"></p>
+        <p align="center"><div class="fabu1"><input type="text" name="stareprovince" size="20"></p>
       </td>
       <td >
         <p align="center">起始城市：</p>
       </td>
       <td >
-        <p align="center"><div class="fabu1"><input type="text" name="gstartcity" size="20"></p>
+        <p align="center"><div class="fabu1"><input type="text" name="startcity" size="20"></p>
       </td>
     </tr>
     <tr>
       <td>
       <p align="center">抵达省份：</p>      </td>
       <td >
-        <p align="center"><div class="fabu1"><input type="text" name="gendfirm" size="20"></p>
+        <p align="center"><div class="fabu1"><input type="text" name="endprovince" size="20"></p>
       </td>
       <td>
         <p align="center">抵达城市：</p>
       </td>
       <td>
-        <p align="center"><div class="fabu1"><input type="text" name="gendcity" size="20"></p>
+        <p align="center"><div class="fabu1"><input type="text" name="endcity" size="20"></p>
       </td>
     </tr>
     <tr>
@@ -199,7 +194,7 @@ return false;
 
       <p align="center">
 
-      &nbsp; <select size="1" name="gtransstyle">
+      &nbsp; <select size="1" name="style">
         <option value="快速"selected>快速</option>
         <option value="特快">特快</option>
         <option value="加急">加急</option>
@@ -210,14 +205,14 @@ return false;
          <p align="center">联系电话：</p> 
       </td>
       <td>
-       <p align="center"><div class="fabu1"><input type="text" name="gphone" size="20"></p>
+       <p align="center"><div class="fabu1"><input type="text" name="phone" size="20"></p>
       </td>
     </tr>
     <tr>
       <td>
          <p align="center">联系人：</p> </td>
       <td>
-        <p align="center"><div class="fabu1"><input type="text" name="glink" size="20"></p>
+        <p align="center"><div class="fabu1"><input type="text" name="linkman" size="20"></p>
       </td>
       <td>
     
@@ -230,7 +225,7 @@ return false;
       <td>
       <p align="center">备注：</p>      </td>
       <td colspan="3">
-        <p align="left"><div class="fabu1"><textarea rows="5" name="gremark" cols="72"></textarea></p>
+        <p align="left"><div class="fabu1"><textarea rows="5" name="remark" cols="72"></textarea></p>
       </td>
     </tr>
      <tr>

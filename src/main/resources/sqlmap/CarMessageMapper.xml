@@ -30,7 +30,10 @@
     where id = #{id,jdbcType=INTEGER}
   </select>
    <select id="getAllCarMsg" resultMap="BaseResultMap">
-  	select * from tb_car_message where brand = '已审核'
+  	select * from tb_car_message where brand = '已审核' group by id desc
+  </select>
+  <select id="getCarMsgByUser" resultMap="BaseResultMap" parameterType="java.lang.String">
+  		select * from tb_car_message where adduser = #{adduser,jdbcType=VARCHAR}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from tb_car_message
@@ -47,7 +50,7 @@
       #{style,jdbcType=VARCHAR}, #{carload,jdbcType=VARCHAR}, #{usertime,jdbcType=VARCHAR}, 
       #{drivename,jdbcType=VARCHAR}, #{drivertime,jdbcType=VARCHAR}, #{licencenumber,jdbcType=VARCHAR}, 
       #{licencestyle,jdbcType=VARCHAR}, #{transpotstyle,jdbcType=VARCHAR}, #{linkman,jdbcType=VARCHAR}, 
-      #{linkphone,jdbcType=VARCHAR}, #{rmark,jdbcType=VARCHAR}, #{issuedate,jdbcType=VARCHAR}, 
+      #{linkphone,jdbcType=VARCHAR}, #{rmark,jdbcType=VARCHAR}, now(), 
       #{adduser,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.logistics.model.CarMessage" >
