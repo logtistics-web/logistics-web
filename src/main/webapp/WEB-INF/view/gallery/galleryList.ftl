@@ -32,15 +32,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<a href="index.html">物流知识</a>
 			</div>
 			<div class="top-nav">
-				<span class="menu">MENU</span>
-				<ul class="nav1 cl-effect-15">
-					<li><a href="${rc.contextPath}/index" class="网站首页">网站首页</a></li>
-					<li><a href="${rc.contextPath}/goodsMsgList" data-hover="货物信息">货物信息</a></li>
-					<li><a href="${rc.contextPath}/carMsgList" data-hover="车辆信息">车辆信息</a></li>
-					<li><a href="${rc.contextPath}/enterpriseMsgList" data-hover="企业信息">企业信息</a></li>
-					<li><a href="${rc.contextPath}/galleryMsgList" data-hover="物流知识">物流知识</a></li>
-					<li><a href="${rc.contextPath}/index" data-hover="个人中心">个人中心</a></li>
-				</ul>
+				<#include "include/header.ftl" />
 				<!-- script-for-menu -->
 					<script>
 						 $( "span.menu" ).click(function() {

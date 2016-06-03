@@ -21,6 +21,9 @@
     from tb_customer_message
     where id = #{id,jdbcType=INTEGER}
   </select>
+  <select id="findByUserName" resultMap="BaseResultMap">
+  	select * from tb_customer_message where name = #{name,jdbcType=VARCHAR}
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from tb_customer_message
     where id = #{id,jdbcType=INTEGER}

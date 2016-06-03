@@ -32,15 +32,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<a href="index.html">车辆信息</a>
 			</div>
 			<div class="top-nav">
-				<span class="menu">MENU</span>
-				<ul class="nav1 cl-effect-15">
-					<li><a href="${rc.contextPath}/index" class="网站首页">网站首页</a></li>
-					<li><a href="${rc.contextPath}/goodsMsgList" data-hover="货物信息">货物信息</a></li>
-					<li><a href="${rc.contextPath}/carMsgList" data-hover="车辆信息">车辆信息</a></li>
-					<li><a href="${rc.contextPath}/enterpriseMsgList" data-hover="企业信息">企业信息</a></li>
-					<li><a href="${rc.contextPath}/galleryMsgList" data-hover="物流知识">物流知识</a></li>
-					<li><a href="${rc.contextPath}/index" data-hover="个人中心">个人中心</a></li>
-				</ul>
+				<#include "include/header.ftl" />
 				<!-- script-for-menu -->
 					<script>
 						 $( "span.menu" ).click(function() {
@@ -93,11 +85,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<tr>
     <td width="804" height="30" colspan="9" align="right">
     <h3 align="center"><a href="${rc.contextPath}/carsLoadAdd"><span class="label label-info1">发布消息</span></a></h3>
-      <div align="center">共页&nbsp;&nbsp;
-        <a href="/logistics-web/Cars/CarMessage.jsp?topage=">第一页</a>
-        <a href="/logistics-web/Cars/CarMessage.jsp?topage=">上一页</a>
-        <a href="/logistics-web/Cars/CarMessage.jsp?topage=">下一页</a>
-        <a href="/logistics-web/Cars/CarMessage.jsp?topage=">最后一页</a>
+      <div align="center">共${pagination.total}页&nbsp;&nbsp;
+        <a href="">第一页</a>
+        <a href="">上一页</a>
+        <a href="">下一页</a>
+        <a href="">最后一页</a>
         <span class="bgcolor">
           <input name="topage" type="text" class="txt_grey" size="5" value="">页</span></div>
     </td>
