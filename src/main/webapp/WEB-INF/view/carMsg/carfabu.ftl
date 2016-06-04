@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -135,20 +135,20 @@ return false;
 		</div>
 	</div>
 
-<form action="/logistics/Cars/CarMessageadd_config.jsp" method="POST" name="form1">
+<form action="${rc.contextPath}/addGarMsg" method="POST" name="form1">
   <table width="800" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" bordercolordark="#333333" bordercolorlight="#FFFFFF">
     <tr>
       <td width="20%" height="43">
         <p align="center">车牌号码：</p>
       </td>
       <td width="28%" height="43">
-       <div class="fabu1"><input type="text" name="numbers" size="20"></div></p>
+       <div class="fabu1"><input type="text" name="trademark" size="20"></div></p>
       </td>
       <td width="22%" height="43">
         <p align="center">车辆类型：</p>
       </td>
       <td width="30%" height="43">
-        <div class="fabu1"><input type="text" name="type" size="20"></div></p>
+        <div class="fabu1"><input type="text" name="style" size="20"></div></p>
       </td>
     </tr>
     <tr>
@@ -162,29 +162,29 @@ return false;
         <p align="center">车辆限量：</p>
       </td>
       <td width="30%" height="42">
-        <div class="fabu1"><input type="text" name="loads" size="15">吨</div></p>
+        <div class="fabu1"><input type="text" name="carload" size="15">吨</div></p>
       </td>
     </tr>
     <tr>
       <td height="45" align="center">已使用年限：</td>
-      <td height="45"><div class="fabu1"><input name="usetime" type="text" size="20"></div></td>
+      <td height="45"><div class="fabu1"><input name="usertime" type="text" size="20"></div></td>
       <td height="45" align="center">运输类型：</td>
-      <td height="45"><select name="style">
+      <td height="45"><select name="transpotstyle">
 	  <option value="长途" selected >长途</option>
 	  <option value="短途">短途</option>
 	  </select></td>
     </tr>
     <tr>
       <td height="45" align="center">驾驶员姓名：</td>
-      <td height="45"><div class="fabu1"><input type="text" name="name" size="20"></div></td>
+      <td height="45"><div class="fabu1"><input type="text" name="drivename" size="20"></div></td>
       <td height="45" align="center">驾驶证号码：</td>
-      <td height="45"><div class="fabu1"><input type="text" name="number" size="20"></div></td>
+      <td height="45"><div class="fabu1"><input type="text" name="licencenumber" size="20"></div></td>
     </tr>
     <tr>
       <td height="45" align="center">驾驶员驾龄</td>
-      <td height="45"><div class="fabu1"><input type="text" size="20" name="time">年</div></td>
+      <td height="45"><div class="fabu1"><input type="text" size="20" name="drivertime">年</div></td>
       <td height="45" align="center">驾驶类型：</td>
-      <td height="45"><select size="1" name="styles">
+      <td height="45"><select size="1" name="licencestyle">
 	  <option value="A1" selected>A1</option>
 	  <option value="A2" >A2</option> 
       <option value="B1" >B1</option>
@@ -197,7 +197,7 @@ return false;
         <p align="center">联系电话：</p>
       </td>
       <td width="28%" height="45">
-       <div class="fabu1"><input type="text" name="phone" size="20"></div></p>
+       <div class="fabu1"><input type="text" name="linkphone" size="20"></div></p>
       </td>
       <td width="22%" height="45">
         <p align="center">联系人：</p>
@@ -211,7 +211,7 @@ return false;
         <p align="center">备注：</p>
       </td>
       <td height="78" colspan="3">
-       <textarea rows="3" name="meg" cols="72"></textarea></p>
+       <textarea rows="3" name="rmark" cols="72"></textarea></p>
       </td>
     </tr>
     <tr>

@@ -63,15 +63,30 @@ public class CarMsgCtrl {
 	
 	@RequestMapping("/addGarMsg")
 	@ResponseBody
-	public ModelAndView addNews(@ModelAttribute("SpringWeb") CarMessage carMsg, HttpServletRequest request, ModelMap  model) {
+	public ModelAndView addCarMsg(@ModelAttribute("SpringWeb") CarMessage carMsg, HttpServletRequest request, ModelMap  model) {
 		
 		CarMessage record = new CarMessage();
-//		record.set
-		// TODO setAddUser setAddTime
 		
+		User userq = (User) request.getSession().getAttribute("user");
+		if(userq == null){
+			return new ModelAndView("login/login");
+		}
+		record.setTrademark(carMsg.getTrademark());
+		record.setStyle(carMsg.getStyle());
+		record.setCarload(carMsg.getCarload());
+		record.setUsertime(carMsg.getUsertime());
+		record.setTranspotstyle(carMsg.getTranspotstyle());
+		record.setDrivename(carMsg.getDrivename());
+		record.setLicencenumber(carMsg.getLicencenumber());
+		record.setDrivertime(carMsg.getDrivertime());
+		record.setLicencestyle(carMsg.getLicencestyle());
+		record.setLinkman(carMsg.getLinkman());
+		record.setLinkphone(carMsg.getLinkphone());
+		record.setRmark(carMsg.getRmark());
+		record.setBrand("未审核");
 		carMessageMapper.insert(record);
 		
-		return new ModelAndView("redirect:/carList");
+		return new ModelAndView("redirect:/carMsgList");
 	}
 	
 	@RequestMapping("/modifyCarMsg")

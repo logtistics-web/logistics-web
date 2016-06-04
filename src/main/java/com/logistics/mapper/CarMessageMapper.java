@@ -19,4 +19,6 @@ public interface CarMessageMapper {
     int updateByPrimaryKeySelective(CarMessage record);
 
     int updateByPrimaryKey(CarMessage record);
+    
+    List<CarMessage> getCarMsgByUser(String username);
 }
