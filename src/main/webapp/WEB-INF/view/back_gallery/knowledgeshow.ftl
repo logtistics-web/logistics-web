@@ -19,6 +19,7 @@
 <body bgcolor="#ffffff">
 
 <script language="javascript">
+
 </script>
 <div class="banner">
 		<div class="banner-content">
@@ -26,7 +27,6 @@
 				<a href="index.html">物流知识</a>
 			</div>
 			<div class="top-nav">
-				<#include "include/header.ftl" />
 				<!-- script-for-menu -->
 					<script>
 						 $( "span.menu" ).click(function() {

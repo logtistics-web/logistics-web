@@ -12,11 +12,14 @@
 	
 	<context:component-scan base-package="com.logistics.web" />
 	<mvc:resources location="/js/" mapping="/js/**" />
+	<mvc:resources location="/back_js/" mapping="/back_js/**" />
 	<mvc:resources location="/fonts/" mapping="/fonts/**" />
 	<mvc:resources location="/dist/" mapping="/dist/**" />
 	<mvc:resources location="/css/" mapping="/css/**" />
-	<mvc:resources location="/font-css/" mapping="/font-css/**" />
+	<mvc:resources location="/back_css/" mapping="/back_css/**" />
+	<mvc:resources location="/font_css/" mapping="/font_css/**" />
 	<mvc:resources location="/images/" mapping="/images/**" />
+	<mvc:resources location="/back_images/" mapping="/back_images/**" />
 	<mvc:annotation-driven>
 		<mvc:message-converters register-defaults="true">
 			<bean
