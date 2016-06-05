@@ -16,6 +16,9 @@
   <sql id="Blob_Column_List" >
     content
   </sql>
+  <select id="getAllKnowLedgeMsg" resultMap="ResultMapWithBLOBs">
+  	select * from tb_knowledge_message group by id desc
+  </select>
   <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />

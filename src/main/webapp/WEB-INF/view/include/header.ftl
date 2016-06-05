@@ -4,7 +4,7 @@
 					<li><a href="${rc.contextPath}/goodsMsgList" data-hover="货物信息">货物信息</a></li>
 					<li><a href="${rc.contextPath}/carMsgList" data-hover="车辆信息">车辆信息</a></li>
 					<li><a href="${rc.contextPath}/enterpriseMsgList" data-hover="企业信息">企业信息</a></li>
-					<li><a href="${rc.contextPath}/galleryMsgList" data-hover="物流知识">物流知识</a></li>
+					<li><a href="${rc.contextPath}/knowledgeMsgList" data-hover="物流知识">物流知识</a></li>
 					<#if Session.user?exists>
 					<li><a href="${rc.contextPath}/loadMinePage" data-hover="个人中心">个人中心</a></li>
 					<#else>

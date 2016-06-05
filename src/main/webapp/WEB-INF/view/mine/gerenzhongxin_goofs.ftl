@@ -105,7 +105,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <table width="780" align="center">
 	<tr>
-     <h3 align="center"><a href="#"><span class="label label-info1">发布消息</span></a></h3>
+     <h3 align="center"><a href="${rc.contextPath}/goodsLoadAdd"><span class="label label-info1">发布消息</span></a></h3>
     <td width="780" height="30" colspan="9" align="right">
        <div align="center"><p>共1 页&nbsp;&nbsp;
           <a href="/logistics/Goods/Goods_show.jsp?topage=">第一页</a>

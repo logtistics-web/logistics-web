@@ -54,14 +54,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <td width="25%" height="29" align="center">详细</td>
   </tr>
 
+<#if kMsgList??>
+<#list kMsgList as kMsg>
  <tr>
-    <td width="40%" height="32" align="center"></td>
-    <td width="20%" height="32" align="center"></td>
-    <td width="20%" height="32" align="center"></td>
+    <td width="40%" height="32" align="center">${kMsg.title}</td>
+    <td width="20%" height="32" align="center">${kMsg.issuedate}</td>
+    <td width="20%" height="32" align="center">${kMsg.reside}</td>
     <td width="20%" height="32" align="center">
-   <a href="knowledgeshow.html" onClick="#">详细</a></td>
+   <a href="${rc.contextPath}/knowledgeMsgDetail/${kMsg.id}">详细</a></td>
   </tr>
-
+</#list>
+</#if>
 <tr>
     <td width="785" height="30" colspan="9" align="right">
 

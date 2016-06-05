@@ -35,7 +35,12 @@ public class RegistCtrl {
 		User record = new User();
 		
 		User userq = userMapper.findByUserName(user.getName());
-		if(user != null){
+		if(userq != null){
+			Map map = new HashMap();
+			map.put("error", "用户名已经存在，请重新输入");
+			return new ModelAndView("redirect:/loadRegist");
+		}
+		else{
 			record.setName(user.getName());
 			record.setPassword(user.getPassword());
 			record.setPhone(user.getPhone());
@@ -44,11 +49,6 @@ public class RegistCtrl {
 			record.setSex(user.getSex());
 			
 			userMapper.insert(record);
-		}
-		else{
-			Map map = new HashMap();
-			map.put("error", "用户名已经存在，请重新输入");
-			return new ModelAndView("redirect:/loadRegist");
 		}
 		return new ModelAndView("redirect:/login");
 	}

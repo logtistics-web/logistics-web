@@ -20,7 +20,7 @@
 			<div class="nav login_nav">
 				<div class="col-xs-4 login_username">
 					用户名:
-				</div>
+				</div><span class="errmsg" style="color:red">${map.error }</span></br>
 				<div class="col-xs-6 login_usernameInput">
 					<input type="text" name="name" id="name" value="" placeholder="&nbsp;&nbsp;用户名/手机号"  />
 				</div>
