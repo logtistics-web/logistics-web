@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <head>
-
+ 
 <title>货物信息</title>
 <link rel="stylesheet" href="logistics/CSS/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1"> 

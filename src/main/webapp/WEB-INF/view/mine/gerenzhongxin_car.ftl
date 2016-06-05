@@ -1,4 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -89,7 +88,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <td width="11%" height="29" align="center">${carMsg.drivertime}年</td>
 <td width="15%" height="29" align="center">${carMsg.usertime}年</td>
 <td width="11%" height="29" align="center">${carMsg.transpotstyle}</td>
-<td width="12%" height="29" align="center"><a href="${rc.contextPath}/carMsgDetail/${carMsg.id}">修改</a> <a>删除</a></td>
+<td width="12%" height="29" align="center"><a href="${rc.contextPath}/carsLoadModify/${carMsg.id}">修改</a> <a>删除</a></td>
 </tr>
 </#list>
 </#if>
@@ -101,7 +100,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<tr>
     <td width="780" height="30" colspan="9" align="right">
     <h3 align="center"><a href="#"><span class="label label-info1">发布消息</span></a></h3>
-      <div align="center">共页&nbsp;&nbsp;
+      <div align="center">共1页&nbsp;&nbsp;
         <a href="/logistics-web/Cars/CarMessage.jsp?topage=">第一页</a>
         <a href="/logistics-web/Cars/CarMessage.jsp?topage=">上一页</a>
         <a href="/logistics-web/Cars/CarMessage.jsp?topage=">下一页</a>

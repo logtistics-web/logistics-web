@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="../CSS/style.css">
 <title>
 Goods_xiangxi page 
-
+ 
 
 </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">

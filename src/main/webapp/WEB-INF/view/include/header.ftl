@@ -9,6 +9,7 @@
 					<li><a href="${rc.contextPath}/loadMinePage" data-hover="个人中心">个人中心</a></li>
 					<#else>
 					<li><a href="${rc.contextPath}/login" data-hover="登录">登录</a></li>
+					<li><a href="${rc.contextPath}/loadRegist" data-hover="注册">注册</a></li>
 					</#if>
 					<#if Session.user?exists>
 						<div>

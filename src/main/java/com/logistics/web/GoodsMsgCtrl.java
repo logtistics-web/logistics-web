@@ -43,7 +43,7 @@ public class GoodsMsgCtrl {
 	}
 	
 	@RequestMapping(value="goodsMsgDetail/{id}")
-	public String loadModify(@PathVariable Integer id, ModelMap model,
+	public String loadDetail(@PathVariable Integer id, ModelMap model,
 			HttpServletRequest request) {
 		
 		GoodsMessage goodsMsg = goodsMsgMapper.selectByPrimaryKey(id);
@@ -91,15 +91,36 @@ public class GoodsMsgCtrl {
 		return new ModelAndView("redirect:/goodsMsgList");
 	}
 	
+	@RequestMapping("/goodsLoadModify/{id}")
+	public String loadModify(@PathVariable Integer id,ModelMap model,HttpServletRequest request){
+		User userq = (User) request.getSession().getAttribute("user");
+		if(userq == null){
+			return "login/login";
+		}
+		
+		GoodsMessage goodsMsg = goodsMsgMapper.selectByPrimaryKey(id);
+		model.addAttribute("goodsMsg",goodsMsg);
+		return "mine/goods_change";
+	}
+	
 	@RequestMapping("/modifyGoods")
 	@ResponseBody
 	public ModelAndView modifyNews(@ModelAttribute("SpringWeb") GoodsMessage goodsMsg, HttpServletRequest request, ModelMap  model) {
 		
 		GoodsMessage record = goodsMsgMapper.selectByPrimaryKey(goodsMsg.getId());
-		
-		// TODO update setAddTime
+		record.setGoodsname(goodsMsg.getGoodsname());
+		record.setGoodsnumber(goodsMsg.getGoodsnumber());
+		record.setGoodsunit(goodsMsg.getGoodsunit());
+		record.setStareprovince(goodsMsg.getStareprovince());
+		record.setStartcity(goodsMsg.getStartcity());
+		record.setEndprovince(goodsMsg.getEndprovince());
+		record.setEndcity(goodsMsg.getEndcity());
+		record.setLinkman(goodsMsg.getLinkman());
+		record.setPhone(goodsMsg.getPhone());
+		record.setStyle(goodsMsg.getStyle());
+		record.setRemark(goodsMsg.getRemark());
 		
 		goodsMsgMapper.updateByPrimaryKey(record);
-		return new ModelAndView("redirect:/goodsMsgList");
+		return new ModelAndView("redirect:/loadGoodsMsgList");
 	}
 }
