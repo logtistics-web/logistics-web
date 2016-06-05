@@ -82,7 +82,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <td width="17%" align="center"height="27">${enterpriseMsg.operation}</td>
     <td width="18%" align="center"height="27">${enterpriseMsg.workarea}</td>
     <td width="18%" align="center"height="27">${enterpriseMsg.address}</td>
-    <td width="17%" align="center"height="27"><a href="${rc.contextPath}/enterpriseDetail/${enterpriseMsg.id}">修改</a><a>删除</a>　</td>
+    <td width="17%" align="center"height="27"><a href="${rc.contextPath}/enterpriseLoadModify/${enterpriseMsg.id}">修改</a><a>删除</a>　</td>
   </tr>
 
 </#list>
@@ -96,7 +96,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<tr>
     <td width="780" height="30" colspan="9" align="right">
     <h3 align="center"><a href="#"><span class="label label-info1">发布消息</span></a></h3>
-      <div align="center">共页&nbsp;&nbsp;
+      <div align="center">共1页&nbsp;&nbsp;
         <a href="/logistics-web/Cars/CarMessage.jsp?topage=">第一页</a>
         <a href="/logistics-web/Cars/CarMessage.jsp?topage=">上一页</a>
         <a href="/logistics-web/Cars/CarMessage.jsp?topage=">下一页</a>

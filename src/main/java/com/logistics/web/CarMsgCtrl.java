@@ -43,7 +43,7 @@ public class CarMsgCtrl {
 	}
 	
 	@RequestMapping(value="carMsgDetail/{id}")
-	public String loadModify(@PathVariable Integer id, ModelMap model,
+	public String loadDetail(@PathVariable Integer id, ModelMap model,
 			HttpServletRequest request) {
 		
 		CarMessage carMessage = carMessageMapper.selectByPrimaryKey(id);
@@ -89,14 +89,35 @@ public class CarMsgCtrl {
 		return new ModelAndView("redirect:/carMsgList");
 	}
 	
+	@RequestMapping("/carsLoadModify/{id}")
+	public String loadModify(@PathVariable Integer id,ModelMap model,HttpServletRequest request){
+		User userq = (User) request.getSession().getAttribute("user");
+		if(userq == null){
+			return "login/login";
+		}
+		CarMessage carMsg = carMessageMapper.selectByPrimaryKey(id);
+		model.addAttribute("carMsg", carMsg);
+		return "mine/car_change";
+	}
+	
 	@RequestMapping("/modifyCarMsg")
 	@ResponseBody
-	public ModelAndView modifyNews(@ModelAttribute("SpringWeb") CarMessage carMsg, HttpServletRequest request, ModelMap  model) {
+	public ModelAndView modifyCarMsg(@ModelAttribute("SpringWeb") CarMessage carMsg, HttpServletRequest request, ModelMap  model) {
 		
 		CarMessage record = carMessageMapper.selectByPrimaryKey(carMsg.getId());
-		// TODO update setAddTime
-		
+		record.setTrademark(carMsg.getTrademark());
+		record.setStyle(carMsg.getStyle());
+		record.setCarload(carMsg.getCarload());
+		record.setUsertime(carMsg.getUsertime());
+		record.setDrivename(carMsg.getDrivename());
+		record.setLicencenumber(carMsg.getLicencenumber());
+		record.setDrivertime(carMsg.getDrivertime());
+		record.setLinkman(carMsg.getLinkman());
+		record.setLinkphone(carMsg.getLinkphone());
+		record.setLicencestyle(carMsg.getLicencestyle());
+		record.setTranspotstyle(carMsg.getTranspotstyle());
+		record.setRmark(carMsg.getRmark());
 		carMessageMapper.updateByPrimaryKey(record);
-		return new ModelAndView("redirect:/carList");
+		return new ModelAndView("redirect:/loadCarMsgList");
 	}
 }

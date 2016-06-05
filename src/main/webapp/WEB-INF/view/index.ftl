@@ -232,7 +232,7 @@ AutoPlay_1();
 湖北·武汉市</a></li>
 					<li><a href="#">饲料--陕西·丹凤县→
 宁夏·银川市</a></li>
-					<li><a href="#">更多信息...</a></li>
+					<li><a href="${rc.contextPath}/goodsMsgList">更多信息...</a></li>
 				</ul>
 			</div>
 		
@@ -263,7 +263,7 @@ AutoPlay_1();
 					<li><a href="#">陕V21547*-东风--厢式货车--4吨--短途</a></li>
 					<li><a href="#">陕V21547*--解放--半挂--56吨--长途</a></li>
 					<li><a href="#">陕V21547*-东风--厢式货车--4吨--短途</a></li>
-					<li><a href="#">更多信息...</a></li>
+					<li><a href="${rc.contextPath}/carMsgList">更多信息...</a></li>
 				</ul>
 			</div>
 		
@@ -298,7 +298,7 @@ AutoPlay_1();
 					<li><a href="#">派斯德物流有限公司</a></li>
 					<li><a href="#">奥利物流有限公司</a></li>
 					<li><a href="#">襄阳集远物流有限公司</a></li>
-					<li><a href="#">更多信息...</a></li>
+					<li><a href="${rc.contextPath}/enterpriseMsgList">更多信息...</a></li>
 				</ul>
 			</div>
 		

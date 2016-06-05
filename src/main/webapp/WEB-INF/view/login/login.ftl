@@ -149,7 +149,7 @@ function barter_btn(bb) {
 	</form>
 
 	</div>
-
+<a href="${rc.contextPath}/loadRegist">注册</a>
 <div style="text-align:center;">
 
 </div>
