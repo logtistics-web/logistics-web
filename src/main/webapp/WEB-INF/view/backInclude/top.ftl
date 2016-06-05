@@ -10,11 +10,12 @@
     	<td width=260>
     		<img height=60 src="back_images/head_title.png" width=500>
     	</td>
+    	<#if Session.user?exists>
     	<td  class="td1" align="right">
-    		当前用户：teacher &nbsp;
-			<a href="#" target="MainFrame">修改口令</a>&nbsp;|&nbsp;
-			<a style="margin-right:100px;" onclick="if (confirm('确定要退出系统么？')) return true; else return false;" href="#" >退出系统</a> 
+    		当前用户：${Session.user.getName()} &nbsp;
+			<a style="margin-right:100px;" onclick="if (confirm('确定要退出系统么？')) return true; else return false;" href="${rc.contextPath}/backLogout" >退出系统</a> 
     	</td>
+    	</#if>
     </tr>
     </table>	
 </body>

@@ -17,7 +17,9 @@
     		<TD background=/admin/images/shadow_bg.jpg></TD></TR>
     	</TABLE>
     	<div class="adminer" ><img width=100 height=100 src="back_images/adminer.jpg" ></div>
-        <div class="teacher" >teacher <br><br>欢迎进入后台管理系统!</div>
+        <div class="teacher" ><#if Session.user?exists>
+    		${Session.user.getName()} &nbsp;
+    	</#if> <br><br>欢迎进入后台管理系统!</div>
 </div>
 
 </body>

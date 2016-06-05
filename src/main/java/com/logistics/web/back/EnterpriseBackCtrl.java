@@ -15,6 +15,7 @@ import com.logistics.dto.Pagination;
 import com.logistics.mapper.EnterpriseMessageMapper;
 import com.logistics.model.CarMessage;
 import com.logistics.model.EnterpriseMessage;
+import com.logistics.model.Manage;
 import com.logistics.service.EnterpriseService;
 
 @Controller
@@ -30,6 +31,11 @@ public class EnterpriseBackCtrl {
 	public String loadList(Pagination pagination, ModelMap model,
 			HttpServletRequest request) {
 
+		Manage userq = (Manage) request.getSession().getAttribute("user");
+		if(userq == null){
+			return "back_login/login";
+		}
+		
 		ListResult listResult = enterpriseService.getEnterpriseMsg(pagination);
 		@SuppressWarnings("unchecked")
 		List<EnterpriseMessage> enterpriseMsgList = listResult.getResult();
@@ -42,6 +48,11 @@ public class EnterpriseBackCtrl {
 	@RequestMapping(value="enterpriseBackDetail/{id}")
 	public String loadDetail(@PathVariable Integer id, ModelMap model,
 			HttpServletRequest request) {
+		
+		Manage userq = (Manage) request.getSession().getAttribute("user");
+		if(userq == null){
+			return "back_login/login";
+		}
 		
 		EnterpriseMessage enterpriseMsg = enterpriseMapper.selectByPrimaryKey(id);
 		model.addAttribute("enterpriseMsg", enterpriseMsg);

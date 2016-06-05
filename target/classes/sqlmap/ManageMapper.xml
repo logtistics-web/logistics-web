@@ -15,6 +15,9 @@
     from tb_manager_message
     where id = #{id,jdbcType=INTEGER}
   </select>
+  <select id="findByUserName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+  	select * from tb_manager_message where name = #{name,jdbcType=VARCHAR}
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from tb_manager_message
     where id = #{id,jdbcType=INTEGER}

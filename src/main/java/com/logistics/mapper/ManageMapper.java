@@ -14,4 +14,6 @@ public interface ManageMapper {
     int updateByPrimaryKeySelective(Manage record);
 
     int updateByPrimaryKey(Manage record);
+
+	Manage findByUserName(String username);
 }

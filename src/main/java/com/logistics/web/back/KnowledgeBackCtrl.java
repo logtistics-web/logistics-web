@@ -9,11 +9,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.logistics.dto.ListResult;
 import com.logistics.dto.Pagination;
 import com.logistics.mapper.KnowledgeMapper;
 import com.logistics.model.Knowledge;
+import com.logistics.model.Manage;
 import com.logistics.service.KnowledgeService;
 
 @Controller
@@ -26,20 +28,30 @@ public class KnowledgeBackCtrl {
 	private KnowledgeMapper knowledgeMapper;
 	
 	@RequestMapping(value = "/knowledgeBackList")
-	public String loadList(Pagination pagination, ModelMap model,
+	public ModelAndView loadList(Pagination pagination, ModelMap model,
 			HttpServletRequest request) {
-
+		
+		Manage userq = (Manage) request.getSession().getAttribute("user");
+		if(userq == null){
+			return new ModelAndView("back_login/login");
+		}
+		
 		ListResult listResult = knowledgeService.getKnowledgeMsg(pagination);
 		@SuppressWarnings("unchecked")
 		List<Knowledge> kMsgList = listResult.getResult();
 		
 		model.addAttribute("kMsgList", kMsgList);
 
-		return "back_gallery/galleryList";
+		return new ModelAndView("back_gallery/galleryList");
 	}
 	@RequestMapping(value="knowledgeBackMsgDetail/{id}")
 	public String loadDetail(@PathVariable Integer id, ModelMap model,
 			HttpServletRequest request) {
+		
+		Manage userq = (Manage) request.getSession().getAttribute("user");
+		if(userq == null){
+			return "back_login/login";
+		}
 		
 		Knowledge knowledge = knowledgeMapper.selectByPrimaryKey(id);
 		model.addAttribute("knowledge", knowledge);

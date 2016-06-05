@@ -14,6 +14,7 @@ import com.logistics.dto.ListResult;
 import com.logistics.dto.Pagination;
 import com.logistics.mapper.CarMessageMapper;
 import com.logistics.model.CarMessage;
+import com.logistics.model.Manage;
 import com.logistics.service.CarMessageService;
 
 @Controller
@@ -29,6 +30,11 @@ public class CarBackCtrl {
 	public String loadList(Pagination pagination, ModelMap model,
 			HttpServletRequest request) {
 
+		Manage userq = (Manage) request.getSession().getAttribute("user");
+		if(userq == null){
+			return "back_login/login";
+		}
+		
 		ListResult listResult = carMsgService.getCarsMsg(pagination);
 		@SuppressWarnings("unchecked")
 		List<CarMessage> carMsgList = listResult.getResult();
@@ -41,6 +47,11 @@ public class CarBackCtrl {
 	@RequestMapping(value="carBackDetail/{id}")
 	public String loadDetail(@PathVariable Integer id, ModelMap model,
 			HttpServletRequest request) {
+		
+		Manage userq = (Manage) request.getSession().getAttribute("user");
+		if(userq == null){
+			return "back_login/login";
+		}
 		
 		CarMessage carMessage = carMessageMapper.selectByPrimaryKey(id);
 		model.addAttribute("carMessage", carMessage);
