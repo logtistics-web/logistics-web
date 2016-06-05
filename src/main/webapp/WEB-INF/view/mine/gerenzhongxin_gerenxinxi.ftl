@@ -1,4 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -63,14 +62,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div  style=" width:400px;height:300px; margin-left:500px; margin-top:80px;">
 <div class="login_div">
 	
-	<form action="" class="login" method="post">
+	<form action="${rc.contextPath}/modifyMineInfo" class="login" method="post">
 		<div class="nav">
 			<div class="nav">
 				<div class="col-xs-4 login_username">
 					用户名:
 				</div>
 				<div class="col-xs-6 login_usernameInput">
-					<input type="text" name="" id="name" value="" placeholder="&nbsp;&nbsp;用户名/手机号"  />
+					<input type="text" name="name" id="name" value="${userq.name}" placeholder="&nbsp;&nbsp;用户名/手机号"  readonly="readonly" />
 				</div>
 			</div>
 			<div class="nav login_psdNav">
@@ -78,7 +77,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					密&nbsp;&nbsp;&nbsp;码:
 				</div>
 				<div class="col-xs-6">
-					<input type="password" name="" id="psd" value="" placeholder="&nbsp;&nbsp;密码" />
+					<input type="password" name="password" id="psd" value="" placeholder="&nbsp;&nbsp;密码" />
 				</div>
 				
 			</div>
@@ -87,7 +86,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					确认密码:
 				</div>
 				<div class="col-xs-6">
-					<input type="password" name="" id="psd" value="" placeholder="&nbsp;&nbsp;确认密码" />
+					<input type="password" name="password1" id="psd" value="" placeholder="&nbsp;&nbsp;确认密码" />
 				</div>
                 
 			</div>
@@ -96,7 +95,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					电&nbsp;&nbsp;&nbsp;话:
 				</div>
 				<div class="col-xs-6">
-					<input type="password" name="" id="psd" value="" placeholder="&nbsp;&nbsp;电话" />
+					<input type="text" name="phone" id="psd" value="${userq.phone}" placeholder="&nbsp;&nbsp;电话" />
 				</div>
                 </div>
 				<div class="nav login_psdNav">
@@ -104,7 +103,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					密保问题:
 				</div>
 				<div class="col-xs-6">
-					<input type="password" name="" id="psd" value="" placeholder="&nbsp;&nbsp;密保问题" />
+					<input type="text" name="question" id="psd" value="${userq.question}" placeholder="&nbsp;&nbsp;密保问题"  readonly="readonly"/>
 				</div>
 				
 			</div>
@@ -114,25 +113,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					问题答案:
 				</div>
 				<div class="col-xs-6">
-					<input type="password" name="" id="psd" value="" placeholder="&nbsp;&nbsp;问题答案" />
+					<input type="text" name="result" id="psd" value="${userq.result}" placeholder="&nbsp;&nbsp;问题答案" />
 				</div>
 				
 			</div>
-            <div class="nav login_psdNav">
-				<div class="col-xs-4">
-					性&nbsp;&nbsp;&nbsp;别:
-				</div>
-				<div style="margin-top:0px; height:30px;" >
-					<select id="states" name="states">
-                    
-            <option value="default">&ndash; 选择性别 &ndash;</option>
-            <option value="1">男</option>
-            <option value="0">女</option>
-         
-          </select>
-			     </div>	
-			</div>
-       
 
 			<div class="col-xs-12 login_btn_div">
 				<input type="submit" class="sub_btn"  style="font:15px; color:#66C;" value="提交" id="register" />

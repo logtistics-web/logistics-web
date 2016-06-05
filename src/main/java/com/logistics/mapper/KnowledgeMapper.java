@@ -1,5 +1,7 @@
 package com.logistics.mapper;
 
+import java.util.List;
+
 import com.logistics.model.Knowledge;
 
 public interface KnowledgeMapper {
@@ -16,4 +18,6 @@ public interface KnowledgeMapper {
     int updateByPrimaryKeyWithBLOBs(Knowledge record);
 
     int updateByPrimaryKey(Knowledge record);
+
+	List<Knowledge> getAllKnowLedgeMsg();
 }
