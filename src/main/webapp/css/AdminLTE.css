@@ -70,7 +70,7 @@ body > .header {
 }
 @media screen and (min-width: 992px) {
   .left-side {
-    top: 185px;
+    top: 208px;
 	left:90px;
 	width:186px;
   }

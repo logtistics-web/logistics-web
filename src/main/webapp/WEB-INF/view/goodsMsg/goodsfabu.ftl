@@ -147,12 +147,24 @@ return false;
       <td width="277" >
         <p align="center"><div class="fabu1"><input type="text" name="goodsname" size="20"></p>
       </td>
+      
+      <td>
+      <p align="center">运输类型：</p>      </td>
+      <td >
+
+      <p align="left">&nbsp; <select size="1" name="style">
+        <option value="快速"selected>快速</option>
+        <option value="特快">特快</option>
+        <option value="加急">加急</option>
+      </select>
+     </p>
+     </td>
     </tr>
     <tr>
       <td>
       <p align="center">货物数量：</p>      </td>
       <td >
-        <p align="center"><div class="fabu1"><input type="text" name="goodsnumber" size="10"></p>
+        <p align="center"><div class="fabu1"><input type="text" name="goodsnumber" size="20"></p>
       </td>
       <td>
         <p align="center">数量单位：</p>
@@ -187,20 +199,11 @@ return false;
         <p align="center"><div class="fabu1"><input type="text" name="endcity" size="20"></p>
       </td>
     </tr>
-    <tr>
+     <td>
+         <p align="center">联系人：</p> </td>
       <td>
-      <p align="center">运输类型：</p>      </td>
-      <td >
-
-      <p align="center">
-
-      &nbsp; <select size="1" name="style">
-        <option value="快速"selected>快速</option>
-        <option value="特快">特快</option>
-        <option value="加急">加急</option>
-      </select>
-     </p>
-     </td>
+        <p align="center"><div class="fabu1"><input type="text" name="linkman" size="20"></p>
+      </td>
       <td>
          <p align="center">联系电话：</p> 
       </td>
@@ -209,11 +212,7 @@ return false;
       </td>
     </tr>
     <tr>
-      <td>
-         <p align="center">联系人：</p> </td>
-      <td>
-        <p align="center"><div class="fabu1"><input type="text" name="linkman" size="20"></p>
-      </td>
+     
       <td>
     
       </td>

@@ -16,7 +16,7 @@ CarMessageshow
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstarp-css -->
-<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!--// bootstarp-css -->
 <!-- css -->
 <link rel="stylesheet" href="../css/style.css" type="text/css" media="all" />
@@ -95,19 +95,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
    <td width="253" height="34">${enterpriseMsg.adduser}</td>
   </tr>
-<tr>
-    <td width="115" height="34">发布时间：</td>
-    <td width="265" height="34">${enterpriseMsg.issusdate}</td>
-    <td width="125" height="34">发布人：</td>
-
-   <td width="253" height="34">${enterpriseMsg.adduser}</td>
-  </tr>
-  <tr>
-    <td width="786" height="45" colspan="4" align="center">                 
-      <p><input type="submit" value="修改" name="B1"><input type="reset" value="重写" name="B2">&nbsp;&nbsp;
-     <a href="/logistics/Enterprise/delete.jsp?id=">删除</a>      
-</td>
-  </tr>
+  
 
 </form>
 
