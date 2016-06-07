@@ -45,27 +45,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 	</div>
-<table border="1" width="804" align="center"bordercolor="#FFFFFF" cellpadding="0" cellspacing="0"bordercolordark="#333333" bordercolorlight="#FFFFFF">
+<table border="0" width="790" align="center">
 <tr>
     
   </tr>
   <tr>
-    <td width="18%" align="center"height="27">企业类型</td>
-    <td width="17%" align="center"height="27">企业名称</td>
-    <td width="17%" align="center"height="27">经营范围</td>
-    <td width="17%" align="center"height="27">所属区域</td>
-    <td width="17%" align="center"height="27">地址</td>
-    <td width="18%" align="center"height="27">详细</td>
+    
+    <td width="25%" align="left"height="30">企业名称</td>
+    <td width="12%" align="left"height="30">经营范围</td>
+    <td width="13%" align="left"height="30">价  格</td>
+    <td width="17%" align="left"height="35" >联系方式</td>
+    <td width="25%" align="left"height="30">地 址</td>
+    <td width="8%" align="left"height="30">详 细</td>
   </tr>
 <#if enterpriseMsgList??>
 <#list enterpriseMsgList as enterpriseMsg>
  <tr>
-    <td width="17%" align="center" height="27">${enterpriseMsg.emterprisetype}</td>
-    <td width="17%" align="center"height="27">${enterpriseMsg.enterprisrname}</td>
-    <td width="17%" align="center"height="27">${enterpriseMsg.operation}</td>
-    <td width="18%" align="center"height="27">${enterpriseMsg.workarea}</td>
-    <td width="18%" align="center"height="27">${enterpriseMsg.address}</td>
-    <td width="17%" align="center"height="27"><a href="${rc.contextPath}/enterpriseDetail/${enterpriseMsg.id}">详细</a>　</td>
+    
+    <td align="left" height="30">${enterpriseMsg.enterprisrname}</td>
+    <td align="left"height="30">${enterpriseMsg.operation}</td>
+    <td align="left"height="30">${enterpriseMsg.workarea}</td>
+    <td align="left" height="30">${enterpriseMsg.phone}</td>
+    <td align="left"height="30">${enterpriseMsg.address}</td>
+    <td align="left"height="30"><a href="${rc.contextPath}/enterpriseDetail/${enterpriseMsg.id}">详细</a>　</td>
   </tr>
 
 </#list>

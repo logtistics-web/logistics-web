@@ -104,7 +104,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   </tr>
 
  <tr>
-      
+  <td border="0" height="30" colspan="4">
+        <p align="center">
+      <a href="${rc.contextPath}/carMsgList">返回</a>
+      </td>  
   </tr>
 
 </table>

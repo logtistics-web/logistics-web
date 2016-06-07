@@ -145,6 +145,9 @@ function barter_btn(bb) {
 			<div class="login_btn_div">
 				<input type="submit" class="sub_btn"  style="font:15px; color:#66C;"value="登录" id="login" />
 			</div>
+			<div class="col-xs-12 barter_btnDiv">
+		<a href="register.html" style="color:#FFF;">没有账号？前去注册</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="findpassword.html" style="color:#FFF;">忘记密码？</a>
+	</div>
 		</div>
 	</form>
 

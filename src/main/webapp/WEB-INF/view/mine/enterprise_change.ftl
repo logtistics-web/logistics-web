@@ -10,7 +10,7 @@
 <!-- bootstarp-css -->
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 
-<link rel="stylesheet" href="../css/style.css" type="text/css" media="all" />
+
 <link rel="stylesheet" href="../css/fabu.css" type="text/css" media="all" />
 <style type="text/css">
 
@@ -92,7 +92,7 @@
     </tr>
   <tr>
     <td height="45" colspan="4" align="center">
-      <p><input type="submit" value="确认修改" name="B1" onClick="return check()">&nbsp;&nbsp;<a href="">返回</a></td>
+      <p><input type="submit" value="确认修改" name="B1" onClick="return check()">&nbsp;&nbsp;<a href="${rc.contextPath}/loadEnterpriseMsgList">返回</a></td>
   </tr>
 </table>
 </form>

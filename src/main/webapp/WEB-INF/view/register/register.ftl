@@ -48,7 +48,7 @@
 					电&nbsp;&nbsp;&nbsp;话:
 				</div>
 				<div class="col-xs-6">
-					<input type="password" name="phone" id="psd" value="" placeholder="&nbsp;&nbsp;电话" />
+					<input type="text" name="phone" id="psd" value="" placeholder="&nbsp;&nbsp;电话" />
 				</div>
                 </div>
 				<div class="nav login_psdNav">
@@ -56,7 +56,7 @@
 					密保问题:
 				</div>
 				<div class="col-xs-6">
-					<input type="password" name="question" id="psd" value="" placeholder="&nbsp;&nbsp;密保问题" />
+					<input type="text" name="question" id="psd" value="" placeholder="&nbsp;&nbsp;密保问题" />
 				</div>
 				
 			</div>
@@ -65,7 +65,7 @@
 					问题答案:
 				</div>
 				<div class="col-xs-6">
-					<input type="password" name="result" id="psd" value="" placeholder="&nbsp;&nbsp;问题答案" />
+					<input type="text" name="result" id="psd" value="" placeholder="&nbsp;&nbsp;问题答案" />
 				</div>
 				
 			</div>

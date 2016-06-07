@@ -92,7 +92,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <td width="125" height="34">发布人：</td>
    <td width="253" height="34">${enterpriseMsg.adduser}</td>
   </tr>
-  
+    <tr>
+   <td border="0" height="30" colspan="4">
+        <p align="center">
+      <a href="${rc.contextPath}/enterpriseMsgList">返回</a>
+      </td>
+  </tr>
 
 </form>
 

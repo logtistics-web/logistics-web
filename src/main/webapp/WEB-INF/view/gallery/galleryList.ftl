@@ -45,12 +45,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 	</div>
-<table width="806" border="1" align="center" cellpadding="0" cellspacing="0"bordercolor="#FFFFFF" bordercolordark="#333333" bordercolorlight="#FFFFFF">
+<table width="806" border="0" align="center" cellpadding="0" cellspacing="0"bordercolor="#FFFFFF" bordercolordark="#333333" bordercolorlight="#FFFFFF">
  
   <tr>
     <td width="25%" height="29" align="center">标题</td>
-    <td width="25%" height="29" align="center">发布日期</td>
     <td width="25%" height="29" align="center">知识类型</td>
+    <td width="25%" height="29" align="center">发布日期</td>
     <td width="25%" height="29" align="center">详细</td>
   </tr>
 
@@ -58,8 +58,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <#list kMsgList as kMsg>
  <tr>
     <td width="40%" height="32" align="center">${kMsg.title}</td>
-    <td width="20%" height="32" align="center">${kMsg.issuedate}</td>
     <td width="20%" height="32" align="center">${kMsg.reside}</td>
+    <td width="20%" height="32" align="center">${kMsg.issuedate}</td>
     <td width="20%" height="32" align="center">
    <a href="${rc.contextPath}/knowledgeMsgDetail/${kMsg.id}">详细</a></td>
   </tr>

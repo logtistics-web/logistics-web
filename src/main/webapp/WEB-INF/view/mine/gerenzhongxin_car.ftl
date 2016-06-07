@@ -82,7 +82,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <#if carList??>
 <#list carList as carMsg>
 	<tr>
-<td width="11%" height="29" align="center">${carMsg.licencenumber}</td>
+<td width="11%" height="29" align="center">${carMsg.trademark}</td>
 <td width="11%" height="29" align="center">${carMsg.style}</td>
 <td width="11%" height="29" align="center">${carMsg.carload}吨</td>
 <td width="11%" height="29" align="center">${carMsg.drivertime}年</td>

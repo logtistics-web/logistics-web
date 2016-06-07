@@ -147,10 +147,10 @@ function barter_btn(bb) {
 			</div>
 		</div>
 	</form>
-
+<div class="col-xs-12 barter_btnDiv">
+		<a href="${rc.contextPath}/loadRegist" style="color:#FFF;">没有账号？前去注册</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="findpassword.html" style="color:#FFF;">忘记密码？</a>
 	</div>
-<a href="${rc.contextPath}/loadRegist">注册</a>
-<div style="text-align:center;">
+	</div>
 
 </div>
 

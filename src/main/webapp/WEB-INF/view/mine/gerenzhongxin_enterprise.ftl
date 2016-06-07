@@ -67,12 +67,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    </td> 
   </tr>
    <tr>
-    <td width="18%" align="center"height="27">企业类型</td>
-    <td width="17%" align="center"height="27">企业名称</td>
+    <td width="25%" align="center"height="27">企业类型</td>
+    <td width="20%" align="center"height="27">企业名称</td>
     <td width="17%" align="center"height="27">经营范围</td>
     <td width="17%" align="center"height="27">所属区域</td>
     <td width="17%" align="center"height="27">地址</td>
-    <td width="18%" align="center"height="27">操作</td>
+    <td width="8%" align="center"height="27">操作</td>
   </tr>
 <#if enterpriseList??>
 <#list enterpriseList as enterpriseMsg>

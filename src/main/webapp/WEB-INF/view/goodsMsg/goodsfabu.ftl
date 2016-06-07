@@ -177,7 +177,7 @@ return false;
       <td >
       <p align="center">起始省份：</p>      </td>
       <td >
-        <p align="center"><div class="fabu1"><input type="text" name="stareprovince" size="20"></p>
+        <p align="center"><div class="fabu1"><input type="text" name="stareprovince" size="15"> 省</p>
       </td>
       <td >
         <p align="center">起始城市：</p>
@@ -190,7 +190,7 @@ return false;
       <td>
       <p align="center">抵达省份：</p>      </td>
       <td >
-        <p align="center"><div class="fabu1"><input type="text" name="endprovince" size="20"></p>
+        <p align="center"><div class="fabu1"><input type="text" name="endprovince" size="15"> 省</p>
       </td>
       <td>
         <p align="center">抵达城市：</p>
@@ -230,6 +230,8 @@ return false;
      <tr>
       <td height="58" colspan="4">
         <p align="center">
+      <input type="submit" name="show" value="确认发布"  onClick="return check()">
+      <input type="reset" name="reset" value="重置">
        <a href="${rc.contextPath}/goodsMsgList">返回</a>
       </td>
     </tr>

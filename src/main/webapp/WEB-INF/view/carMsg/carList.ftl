@@ -46,7 +46,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 
-<table width="804" height="137" border="1" align="center" cellpadding="0" cellspacing="0"bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#333333">
+<table width="804" height="137" border="0" align="center" cellpadding="0" cellspacing="0"bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#333333">
   <tr>
  
   </tr>
@@ -57,11 +57,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <td width="11%" height="29" align="center">车牌号码</td>
    <td width="11%" height="29" align="center">类型</td>
     <td width="11%" height="29" align="center">车辆限量</td>
-    <td width="11%" height="29" align="center">已使用</td>
-    <td width="11%" height="29" align="center">驾驶员驾龄</td>
+    <td width="11%" height="29" align="center">已使用年限</td>
+    <td width="11%" height="29" align="center">联系人</td>
+     <td width="11%" height="29" align="center">联系方式</td>
     <td width="11%" height="29" align="center">运输类型</td>
-    <td width="12%" height="29">
-   <p align="center">详细</td>
+    <td width="12%" height="29" align="center">详细</td>
 </tr>
 <#if carMsgList??>
 <#list carMsgList as carMsg>
@@ -70,7 +70,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <td width="11%" height="29" align="center">${carMsg.style}</td>
 <td width="11%" height="29" align="center">${carMsg.carload}吨</td>
 <td width="11%" height="29" align="center">${carMsg.drivertime}年</td>
-<td width="15%" height="29" align="center">${carMsg.usertime}年</td>
+<td width="15%" height="29" align="center">${carMsg.linkman}</td>
+<td width="15%" height="29" align="center">${carMsg.linkphone}</td>
 <td width="11%" height="29" align="center">${carMsg.transpotstyle}</td>
 <td width="12%" height="29" align="center"><a href="${rc.contextPath}/carMsgDetail/${carMsg.id}">详细</a></td>
 </tr>

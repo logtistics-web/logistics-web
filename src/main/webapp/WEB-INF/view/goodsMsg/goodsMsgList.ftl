@@ -46,34 +46,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 	</div>
-<table width="804"  border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" bordercolordark="#333333" bordercolorlight="#FFFFFF">
+<table width="804"  border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" bordercolordark="#333333" bordercolorlight="#FFFFFF">
 <tr>
   
   </tr>
  
   <tr>
-    <td width="804" height="29" align="center">货物类型</td>
-    <td width="804" height="29" align="center">货物名称</td>
-    <td width="804" height="29" align="center">货物数量</td>
-    <td width="804" height="29" align="center">数量单位</td>
-    <td width="804" height="29" align="center">起始省份</td>
-    <td width="804" height="29" align="center">起始城市</td>
-    <td width="804" height="29" align="center">抵达省份</td>
-    <td width="804" height="29" align="center">抵达城市</td>
-    <td width="804" height="29"><p align="center">
-      详细信息</td>
+    
+    <td width="10%" height="29" align="center">货物名称</td>
+    <td width="8%" height="29" align="center">货物类型</td>
+    <td width="8%" height="29" align="center">数量单位</td>
+    <td width="10%" height="29" align="center">起始省份</td>
+    <td width="13%" height="29" align="center">起始城市</td>
+    <td width="10%" height="29" align="center">抵达省份</td>
+    <td width="14%" height="29" align="center">抵达城市</td>
+    <td width="9%" height="29" align="center">联系人</td>
+    <td width="8%" height="29" align="center">详细信息</td>
   </tr>
 <#if goodsMsgList??>
 <#list goodsMsgList as goodsMsg>
 	<tr style="padding:5px;">
-<td width="804" height="29" align="center">${goodsMsg.style}</td>  
 <td width="804" height="29" align="center">${goodsMsg.goodsname}</td>
-<td width="804" height="29" align="center">${goodsMsg.goodsnumber}</td>
-<td width="804" height="29" align="center">${goodsMsg.goodsunit}</td>
+<td width="804" height="29" align="center">${goodsMsg.style}</td> 
+<td width="804" height="29" align="center">${goodsMsg.goodsnumber}${goodsMsg.goodsunit}</td>
+<td width="804" height="29" align="center">${goodsMsg.stareprovince}省</td>
 <td width="804" height="29" align="center">${goodsMsg.startcity}</td>
-<td width="804" height="29" align="center">${goodsMsg.startcity}</td>
-<td width="804" height="29" align="center">${goodsMsg.endprovince}</td>
+<td width="804" height="29" align="center">${goodsMsg.endprovince}省</td>
 <td width="804" height="29" align="center">${goodsMsg.endcity}</td>
+<td width="804" height="29" align="center">${goodsMsg.linkman}</td>
 <td width="804" height="29"> <p align="center">
   <a href="${rc.contextPath}/goodsMsgDetail/${goodsMsg.id}">详细</a></td>
 </tr>

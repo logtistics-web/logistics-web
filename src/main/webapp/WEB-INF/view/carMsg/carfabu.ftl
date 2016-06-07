@@ -216,6 +216,8 @@ return false;
     <tr>
       <td height="40" colspan="4">
         <p align="center">
+      <input type="submit" name="show" value="确认发布"  onClick="return check()">
+      <input type="reset" name="reset" value="重置">
       <a href="${rc.contextPath}/carMsgList">返回</a>
       </td>
     </tr>

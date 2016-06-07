@@ -117,14 +117,14 @@ return false;
 			</div>
 		</div>
 	</div>
-  <form method="POST" action="/logistics/Enterprise/enterpriseadd_config.jsp" name="form1">
+  <form method="POST" action="${rc.contextPath}/addEnterprise" name="form1">
 <table width="796" height="345" border="0" align="center" cellpadding="0" cellspacing="0"bordercolor="#FFFFFF" bordercolordark="#333333" bordercolorlight="#FFFFFF">
   
   <tr>
     <td width="115" height="36" align="center">企业名称：</td>
     <td width="265" height="36"><input type="text" name="enterprisrname" size="30"></td>
     <td width="125" height="36" align="center">经营类型：</td>
-    <td width="253" height="36"><input type="text" name="emterprisetype" size="30"></td>
+    <td width="253" height="36"><input type="text" name="operation" size="30"></td>
   </tr>
   <tr>
     <td width="115" height="35" align="center">始发城市：</td>
@@ -154,13 +154,15 @@ return false;
       <td width="20%" height="78">
         <p align="center">企业简介：</p>
       </td>
-      <td height="78" colspan="3">
-      <input type="text" name="introduce" size="30"></p>
+      <td height="60" colspan="4">
+      <input type="text" name="introduce" size="85"></p>
       </td>
     </tr>
   <tr>
    <td height="40" colspan="4">
         <p align="center">
+      <input type="submit" name="show" value="确认发布" onClick="return check()">
+      <input type="reset" name="reset" value="重置">
       <a href="${rc.contextPath}/enterpriseMsgList">返回</a>
       </td>
   </tr>
