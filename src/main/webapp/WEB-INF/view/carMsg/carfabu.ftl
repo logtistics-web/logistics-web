@@ -7,8 +7,7 @@
 <link rel="stylesheet" href="logistics/CSS/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Mining Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<meta name="keywords" content="" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstarp-css -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
@@ -217,8 +216,7 @@ return false;
     <tr>
       <td height="40" colspan="4">
         <p align="center">
-        <input type="submit" name="show" value="发布" onClick="return check()">&nbsp;&nbsp;
-        <input type="submit" name="reset" value="重置">&nbsp;&nbsp;<a href="${rc.contextPath}/carMsgList">返回</a>
+      <a href="${rc.contextPath}/carMsgList">返回</a>
       </td>
     </tr>
   </table>

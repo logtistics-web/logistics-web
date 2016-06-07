@@ -16,7 +16,7 @@ CarMessageshow
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstarp-css -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!--// bootstarp-css -->
 <!-- css -->
 <link rel="stylesheet" href="../css/style.css" type="text/css" media="all" />
@@ -25,7 +25,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="../js/modernizr.custom.js"></script>
 </head>
 
-<jsp:include page="/top.jsp"/>
+
 <body bgcolor="#ffffff">
 
 	<!-- banner -->
@@ -48,9 +48,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 	</div>
-<table width="786" border="1" align="center" cellpadding="0" cellspacing="0"bordercolor="#FFFFFF" bordercolordark="#333333" bordercolorlight="#FFFFFF">
-
-   
+<table width="786" border="1" align="center" cellpadding="0" cellspacing="0" >
 
   <tr>
     <td width="115" height="36">企业类型：</td>
@@ -92,7 +90,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <td width="115" height="34">发布时间：</td>
     <td width="265" height="34">${enterpriseMsg.issusdate}</td>
     <td width="125" height="34">发布人：</td>
-
    <td width="253" height="34">${enterpriseMsg.adduser}</td>
   </tr>
   

@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<link rel="stylesheet" href="../CSS/style.css">
+<link rel="stylesheet" href="CSS/style.css">
 <title>
 Goods_xiangxi page 
  
@@ -107,12 +107,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <td width="17%" height="31" align="center">发布人：</td>
     <td width="36%" height="31" align="left" colspan="3">${goodsMsg.adduser}</td>
   
-  </tr>
-
-    <tr>
-      <td width="100%" height="45" colspan="4" align="center">
-        <a href="/logistics/Goods/Goods_change.jsp?id=">修改</a>&nbsp;&nbsp;
-        <a href="/logistics/Goods/Goods_delete.jsp?id=">删除</a></td>
   </tr>
 
 </table>

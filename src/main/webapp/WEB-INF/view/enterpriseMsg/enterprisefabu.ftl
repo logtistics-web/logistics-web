@@ -7,15 +7,14 @@
 <link rel="stylesheet" href="logistics/CSS/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Mining Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<meta name="keywords" content="" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstarp-css -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!--// bootstarp-css -->
 <!-- css -->
 <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-<link rel="stylesheet" href="css/fabu.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../css/fabu.css" type="text/css" media="all" />
 
 <script language="javascript">
 function check()
@@ -160,8 +159,10 @@ return false;
       </td>
     </tr>
   <tr>
-    <td width="758" height="45" colspan="4" align="center">
-      <p><input type="submit" value="发布" name="B1" onClick="return check()"><input type="reset" value="重写" name="B2"></td>
+   <td height="40" colspan="4">
+        <p align="center">
+      <a href="${rc.contextPath}/enterpriseMsgList">返回</a>
+      </td>
   </tr>
 </table>
 </form>

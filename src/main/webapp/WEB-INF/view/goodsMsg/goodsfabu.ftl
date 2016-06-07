@@ -230,8 +230,7 @@ return false;
      <tr>
       <td height="58" colspan="4">
         <p align="center">
-        <input type="submit" name="show" value="发布" onClick="return check()">
-        <input type="reset" name="reset" value="重置"> &nbsp;&nbsp;<a href="${rc.contextPath}/goodsMsgList">返回</a>
+       <a href="${rc.contextPath}/goodsMsgList">返回</a>
       </td>
     </tr>
   </table>

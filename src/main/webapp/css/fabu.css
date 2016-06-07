@@ -1,0 +1,13 @@
+.fabu1 input[type="text"] {
+  
+  color: #898888;
+  background: none;
+  outline: none;
+  font-size:0.9em;
+  padding:0em;
+  margin-bottom: 0em;
+  border: solid 1.5px #D5D4D4;
+  -webkit-appearance: none;
+  height:25px;
+
+}

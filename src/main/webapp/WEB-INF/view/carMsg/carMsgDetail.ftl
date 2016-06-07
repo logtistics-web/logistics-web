@@ -25,7 +25,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="../js/modernizr.custom.js"></script>
 </head>
 
-<jsp:include page="/top.jsp"/>
 <body bgcolor="#ffffff">
 
 	<!-- banner -->
@@ -105,10 +104,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   </tr>
 
  <tr>
-      <td width="100%" height="33" colspan="4" align="center">
-        <a href="/logistics/Cars/CarMessage_change.jsp?id=">修改</a>&nbsp;&nbsp;
-        <a href="/logistics/Cars/CarMessage_delete.jsp?id=">删除</a>
-    </td>
+      
   </tr>
 
 </table>

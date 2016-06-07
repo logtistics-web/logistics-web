@@ -324,7 +324,7 @@ AutoPlay_1();
      <td height="23" colspan="3"><div align="center">Copyright 2016 西农信息工程学院</div></td>
      </tr><!-- //container -->
      <tr align="center" valign="middle">
-    <td height="23" colspan="3"><div align="center">后台：&nbsp; <a href="mlogin.html">系统管理</a></div></td>
+    <td height="23" colspan="3"><div align="center">后台：&nbsp; <a href="${rc.contextPath}/backLogin">系统管理</a></div></td>
   </tr>
 	</div>
 	<!-- //projects-->
