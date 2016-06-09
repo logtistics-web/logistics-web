@@ -82,7 +82,9 @@
       <th class="th_bg" >已使用</th>
       <th class="th_bg" >驾驶员驾龄</th>
       <th class="th_bg" >运输类型</th>
+      <th class="th_bg" >状态</th>
       <th class="th_bg" style="width:200px;">操&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作</th>
+      <th class="th_bg" style="width:200px;">审核</th>
       </tr>
     </thead>
     <tbody>
@@ -95,35 +97,20 @@
 <td width="11%" height="29" align="center">${carMsg.drivertime}年</td>
 <td width="15%" height="29" align="center">${carMsg.usertime}年</td>
 <td width="11%" height="29" align="center">${carMsg.transpotstyle}</td>
+<td width="11%" height="29" align="center">${carMsg.brand}</td>
 <td width="12%" height="29" align="center"><a href="${rc.contextPath}/carBackDetail/${carMsg.id}">详细</a></td>
+<#if carMsg.brand="未审核">
+<td width="12%" height="29" align="center"><a href="${rc.contextPath}/check/${carMsg.id}">审核通过</a></td>
+</#if>
 </tr>
 </#list>
 </#if>
     </tbody>
     
     </table>
-    <div id="fbMappingPageBar"></div>
-    <div class="row m-t-25">
-    <div class="col-sm-10 col-sm-offset-1">
-        <div class="row" id="fbMappingListData"></div>
-   
-    </div>
-</div>
 </div>
 
 </body>
-<!-- script block -->
-<script type="text/javascript">
 
 
-   var fbMappingPagination = new zhiqu.Pagination({
-    templateKey : "searchPictures.listData"});
-/* 跳转到第一页 */
-fbMappingPagination.setSort({ctime:"DESC"}).first();
-
-
-</script>
-<script type="text/javascript">
-	fbMappingPagination.bar("#fbMappingPageBar",${pagination.total?c}, ${pagination.pageCount?c}, ${pagination.currentPage?c});
-</script>
 </html>

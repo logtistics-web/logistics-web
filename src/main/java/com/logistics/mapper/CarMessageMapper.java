@@ -8,6 +8,8 @@ public interface CarMessageMapper {
 	
 	List<CarMessage> getAllCarMsg();
 	
+	List<CarMessage> getAllBackCarMsg();
+	
     int deleteByPrimaryKey(Integer id);
 
     int insert(CarMessage record);
