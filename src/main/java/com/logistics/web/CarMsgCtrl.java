@@ -83,6 +83,7 @@ public class CarMsgCtrl {
 		record.setLinkman(carMsg.getLinkman());
 		record.setLinkphone(carMsg.getLinkphone());
 		record.setRmark(carMsg.getRmark());
+		record.setAdduser(userq.getName());
 		record.setBrand("未审核");
 		carMessageMapper.insert(record);
 		
