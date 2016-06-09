@@ -111,7 +111,7 @@ function barter_btn(bb) {
 <body class="login_body">
 
 <div class="login_div">
-	<div class="col-xs-12 login_title"><a class="col-xs-12 login_title" href="index.html" style="color:#0FF">杨凌物流联盟信息平台</a>后台登录</div>
+	<div class="col-xs-12 login_title"><a class="col-xs-12 login_title" href="index.html" style="color:#0FF">杨凌物流联盟信息平台</a>登录</div>
 	<form action="${rc.contextPath}/login" class="login" method="post">
 		<div class="nav">
 			<div class="nav login_nav">

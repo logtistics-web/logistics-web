@@ -31,7 +31,7 @@ public class CarMsgCtrl {
 	private CarMessageMapper carMessageMapper;
 	
 	@RequestMapping(value = "/carMsgList" )
-	public String loadList(@RequestBody Pagination pagination, ModelMap model,
+	public String loadList(Pagination pagination, ModelMap model,
 			HttpServletRequest request) {
 
 		ListResult listResult = carMsgService.getCarsMsg(pagination);
