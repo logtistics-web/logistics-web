@@ -32,6 +32,9 @@
    <select id="getAllCarMsg" resultMap="BaseResultMap">
   	select * from tb_car_message where brand = '已审核' group by id desc
   </select>
+  <select id="getAllBackCarMsg" resultMap="BaseResultMap">
+  	select * from tb_car_message group by id desc
+  </select>
   <select id="getCarMsgByUser" resultMap="BaseResultMap" parameterType="java.lang.String">
   		select * from tb_car_message where adduser = #{adduser,jdbcType=VARCHAR}
   </select>
