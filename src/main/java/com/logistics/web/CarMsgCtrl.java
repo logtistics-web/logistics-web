@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
@@ -29,8 +30,8 @@ public class CarMsgCtrl {
 	@Autowired
 	private CarMessageMapper carMessageMapper;
 	
-	@RequestMapping(value = "/carMsgList")
-	public String loadList(Pagination pagination, ModelMap model,
+	@RequestMapping(value = "/carMsgList" )
+	public String loadList(@RequestBody Pagination pagination, ModelMap model,
 			HttpServletRequest request) {
 
 		ListResult listResult = carMsgService.getCarsMsg(pagination);
@@ -38,6 +39,7 @@ public class CarMsgCtrl {
 		List<CarMessage> carMsgList = listResult.getResult();
 		
 		model.addAttribute("carMsgList", carMsgList);
+		model.addAttribute("pagination",pagination);
 
 		return "carMsg/carList";
 	}

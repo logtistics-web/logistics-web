@@ -51,6 +51,14 @@
 					<input type="text" name="phone" id="psd" value="" placeholder="&nbsp;&nbsp;电话" />
 				</div>
                 </div>
+             <div class="nav login_psdNav">
+				<div class="col-xs-4">
+					邮&nbsp;&nbsp;&nbsp;箱:
+				</div>
+				<div class="col-xs-6">
+					<input type="text" name="email" id="psd" value="" placeholder="&nbsp;&nbsp;邮箱" />
+				</div>
+                </div>
 				<div class="nav login_psdNav">
 				<div class="col-xs-4">
 					密保问题:
@@ -81,20 +89,23 @@
             <option value="0">女</option>
          
           </select>
+          <div class="nav login_psdNav">
+				<input type="submit" class="sub_btn"  style="font:15px; color:#66C;" value="提交注册" id="register" />
+			</div>
 			</div>	
+			
+			
 			</div>
        
 
-			<div class="col-xs-12 login_btn_div">
-				<input type="submit" class="sub_btn"  style="font:15px; color:#66C;" value="提交注册" id="register" />
-			</div>
+			
         
 	</form>
 
-	<div class="col-xs-12 barter_btnDiv">
-		<a href="${rc.contextPath}/login" style="color:#FFF;">已有账号？前去登录</a>
-	</div>
+	
 </div>
-
+<div class="col-xs-12 barter_btnDiv">
+				<a href="${rc.contextPath}/login" style="color:#FFF; ">已有账号？前去登录</a>
+			</div>
 </body>
 </html>

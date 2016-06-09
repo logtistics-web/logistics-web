@@ -206,7 +206,7 @@ AutoPlay_1();
 	<div class="welcome">
 	  <div class="welcome-left offer-left">
 			<h3 style="display:inline">货物信息</h3>
-            <a href="#"><span  class="label label-info1" >我要发货</span></a> </div>
+            <a href="${rc.contextPath}/goodsLoadAdd"><span  class="label label-info1" >我要发货</span></a> </div>
             <div class="welcome-left offer-left">
           <div class="offer-left-list">
 				<ul>
@@ -324,7 +324,7 @@ AutoPlay_1();
      <td height="23" colspan="3"><div align="center">Copyright 2016 西农信息工程学院</div></td>
      </tr><!-- //container -->
      <tr align="center" valign="middle">
-    <td height="23" colspan="3"><div align="center">后台：&nbsp; <a href="${rc.contextPath}/backLogin">系统管理</a></div></td>
+    <td height="23" colspan="3"><div align="center">后台：&nbsp; <a href="${rc.contextPath}/backIndex">系统管理</a></div></td>
   </tr>
 	</div>
 	<!-- //projects-->

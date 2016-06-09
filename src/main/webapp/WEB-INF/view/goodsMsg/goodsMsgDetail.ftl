@@ -52,16 +52,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   
 
 <tr>
-    <td width="17%" height="29" align="center">货物类型：</td>
-    <td width="36%" height="29" align="center">${goodsMsg.style}</td>
     <td width="17%" height="29" align="center" valign="middle">货物名称：</td>
     <td width="30%" height="29" align="center">${goodsMsg.goodsname}</td>
+    <td width="17%" height="29" align="center">货物类型：</td>
+    <td width="36%" height="29" align="center">${goodsMsg.style}</td>
   </tr>
   <tr>
     <td width="17%" height="29" align="center">货物数量：</td>
-    <td width="36%" height="29" align="center"> ${goodsMsg.goodsnumber}</td>
-    <td width="17%" height="29" align="center" valign="middle">数量单位：</td>
-    <td width="30%" height="29" align="center"> ${goodsMsg.goodsunit}</td>
+    <td width="36%" height="29" align="center"> ${goodsMsg.goodsnumber}${goodsMsg.goodsunit}</td>
+    <td width="17%" height="31" align="center">发布时间：</td>
+    <td width="36%" height="31" align="left" colspan="3">${goodsMsg.issuedate}</td>
   </tr>
   <tr>
     <td width="17%" height="29" align="center">起始省份：</td>
@@ -76,21 +76,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <td width="30%" height="29" align="center">${goodsMsg.endcity}</td>
   </tr>
   <tr>
-    <td width="17%" height="30" align="center">运输类型：</td>
-    <td width="36%" height="30" align="center">${goodsMsg.style}</td>
-    <td width="17%" height="30" align="center" align="middle">运输时间：</td>  
-    <td width="30%" height="30" align="center">${goodsMsg.issuedate}</td>
-  </tr>
-  <tr>
-    <td width="17%" height="29" align="center">联系电话：</td>
-    <td width="36%" height="29" align="center">${goodsMsg.phone}</td>
     <td width="17%" height="29" align="center" valign="middle">联系人：</td>
     <td width="30%" height="29" align="center">${goodsMsg.linkman}</td>
-  </tr>
-  <tr>
-    <td width="17%" height="31" align="center">发布时间：</td>
-    <td width="36%" height="31" align="left" colspan="3">${goodsMsg.issuedate}</td>
-
+    <td width="17%" height="29" align="center">联系电话：</td>
+    <td width="36%" height="29" align="center">${goodsMsg.phone}</td>
   </tr>
   <tr>
     <td width="17%" height="1" align="center">备注：</td>
@@ -103,10 +92,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       <p align="left"><textarea rows="3" name="S1" cols="76">${goodsMsg.request}</textarea></td>
   </tr>
 <tr>
- 
     <td width="17%" height="31" align="center">发布人：</td>
     <td width="36%" height="31" align="left" colspan="3">${goodsMsg.adduser}</td>
-  
   </tr>
 
 </table>
