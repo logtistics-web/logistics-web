@@ -99,7 +99,14 @@ public class EnterpriseMsgCtrl {
 		model.addAttribute("enterpriseMsg",enterpriseMsg);
 		return "mine/enterprise_change";
 	}
-	
+	@RequestMapping(value="enterpriseDelete/{id}")
+	public ModelAndView enterpriseDelete(@PathVariable Integer id,
+			HttpServletRequest request) {
+		
+		enterpriseMapper.deleteByPrimaryKey(id);
+		
+		return new ModelAndView("redirect:/loadEnterpriseMsgList");
+	}
 	@RequestMapping("/modifyEnterpriseMsg")
 	@ResponseBody
 	public ModelAndView modifyEnterpriseMsg(@ModelAttribute("SpringWeb") EnterpriseMessage enterpriseMsg, HttpServletRequest request, ModelMap  model) {

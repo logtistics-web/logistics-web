@@ -88,7 +88,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <td width="11%" height="29" align="center">${carMsg.drivertime}年</td>
 <td width="15%" height="29" align="center">${carMsg.usertime}年</td>
 <td width="11%" height="29" align="center">${carMsg.transpotstyle}</td>
-<td width="12%" height="29" align="center"><a href="${rc.contextPath}/carsLoadModify/${carMsg.id}">修改</a> <a>删除</a></td>
+<td width="12%" height="29" align="center"><a href="${rc.contextPath}/carsLoadModify/${carMsg.id}">修改</a>
+ <a href="${rc.contextPath}/carDelete/${carMsg.id}">删除</a></td>
 </tr>
 </#list>
 </#if>

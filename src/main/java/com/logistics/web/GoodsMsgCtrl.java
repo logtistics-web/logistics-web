@@ -51,6 +51,14 @@ public class GoodsMsgCtrl {
 		
 		return "goodsMsg/goodsMsgDetail";
 	}
+	@RequestMapping(value="goodsDelete/{id}")
+	public ModelAndView goodsDelete(@PathVariable Integer id,
+			HttpServletRequest request) {
+		
+		goodsMsgMapper.deleteByPrimaryKey(id);
+		
+		return new ModelAndView("redirect:/loadGoodsMsgList");
+	}
 	
 	@RequestMapping("/goodsLoadAdd")
 	public String loadAdd( HttpServletRequest request){

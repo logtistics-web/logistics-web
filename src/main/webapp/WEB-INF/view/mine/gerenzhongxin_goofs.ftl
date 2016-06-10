@@ -95,7 +95,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <td width="804" height="29" align="center">${goodsMsg.endprovince}</td>
 <td width="804" height="29" align="center">${goodsMsg.endcity}</td>
 <td width="804" height="29"> <p align="center">
-  <a href="${rc.contextPath}/goodsLoadModify/${goodsMsg.id}">修改</a><a>删除</a></td>
+  <a href="${rc.contextPath}/goodsLoadModify/${goodsMsg.id}">修改</a>
+  <a href="${rc.contextPath}/goodsDelete/${goodsMsg.id}">删除</a></td>
 </tr>
 </#list>
 </#if>
